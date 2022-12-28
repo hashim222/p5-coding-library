@@ -1,0 +1,14 @@
+.SideNavbarHeight {
+  min-height: 100vh;
+}
+
+.SiteLogo {
+  padding: 20px 15px 20px 15px;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.NavLinkHeader div {
+  padding: 8px;
+  margin: 8px;
+}
