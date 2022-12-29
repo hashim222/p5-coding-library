@@ -15,7 +15,7 @@ const SideNavBar = () => {
       }`}
     >
       <div className={styles.SidebarHeader}>
-        <button className={styles.CloseBtn} onClick={closeSidebar}>
+        <button className={`${styles.CloseBtn} d-lg-none`} onClick={closeSidebar}>
           close
         </button>
       </div>

@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./App.module.css";
 import SideNavBar from "./components/SideNavBar";
-import Home from "./components/ShowNavBar";
+import ShowNavBar from "./components/ShowNavBar";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Container fluid>
         <Row>
           <Col lg={3} className={`${styles.NavBarBgColor}`}>
-            <Home />
+            <ShowNavBar />
             <SideNavBar />
           </Col>
           <Col lg={5} style={{backgroundColor:'pink'}}>2</Col>

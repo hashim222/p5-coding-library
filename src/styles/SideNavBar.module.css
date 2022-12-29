@@ -66,6 +66,7 @@ Sidebar
 .ShowSidebar {
   transform: translate(0);
 }
+
 @media screen and (min-width: 676px) {
   .Sidebar {
     width: 30%;

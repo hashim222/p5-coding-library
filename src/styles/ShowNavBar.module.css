@@ -3,7 +3,6 @@
 }
 
 .SidebarToggle {
-  background-color: aqua;
   position: fixed;
   top: 2rem;
   left: 3rem;
@@ -14,3 +13,7 @@
   cursor: pointer;
   animation: bounce 2s ease-in-out infinite;
 }
+
+
+
+
