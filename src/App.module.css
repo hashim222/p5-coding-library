@@ -1,7 +1,14 @@
 .App {
-  font-family: "DM Sans", sans-serif;
   background-color: #f1f5f8;
   min-height: 100vh;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .NavBarBgColor {
@@ -9,11 +16,13 @@
 }
 
 .ContextNavBarHeight {
-  min-height: 8vh;
+  padding: 20px;
+  border-bottom: 1.5px solid #dadadf;
 }
 
 @media (min-width: 992px) {
   .ContextNavBarHeight {
     min-height: 100vh;
+    border-right: 1.5px solid #dadadf;
   }
 }

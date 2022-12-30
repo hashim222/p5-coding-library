@@ -1,7 +1,28 @@
-.NavBarIcon {
+.NavBarMenuIcon {
   position: fixed;
-  top: 15px;
-  bottom: 0;
-  right: 20px;
-  left: 0;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.NavLinkForLargerScreens {
+  color: #49a6e9;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 160%;
+}
+
+.NavLinkForLargerScreens:hover {
+  transition: color ease-in-out 0.2s;
+  color: #547799;
+}
+
+.NavLinksForSmallerScreens {
+  text-align: center;
+  font-size: 140%;
+  margin-top: 10px;
+  background-color: #49a6e9;
+  border-radius: 20px;
+  color: #ffffff;
 }
