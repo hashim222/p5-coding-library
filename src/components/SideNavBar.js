@@ -2,7 +2,8 @@ import { React, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
-// import styles from '../styles/SideNavBar.module.css'
+import styles from "../styles/SideNavBar.module.css";
+import logo from "../assets/site-logo.png";
 
 function ResponsiveExample() {
   const [show, setShow] = useState(false);
@@ -12,13 +13,27 @@ function ResponsiveExample() {
 
   return (
     <div className="mt-3 ml-2">
-      <Button variant="primary" className="d-lg-none" onClick={handleShow}>
-        <i class="fa-solid fa-bars"></i>
-      </Button>
+      <div className={styles.NavBarIcon}>
+        <img
+          src={logo}
+          alt="site logo"
+          height="45"
+          className="d-lg-none ml-3 mt-n1"
+        />
+        <Button
+          variant="primary"
+          className="d-lg-none float-end"
+          onClick={handleShow}
+        >
+          <i class="fa-solid fa-bars"></i>
+        </Button>
+      </div>
 
       <div variant="info" className="d-none d-lg-block">
         <Nav defaultActiveKey="/home" className="flex-column">
-          <div className="fs-3 mt-3">Site Logo</div>
+          <div className="mt-3 ml-3">
+            <img src={logo} alt="site logo" height="75" />
+          </div>
           <Nav.Link className="mt-5" href="/home">
             <div>
               <i class="fa-solid fa-house"></i> Home
@@ -44,7 +59,9 @@ function ResponsiveExample() {
 
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Site Logo</Offcanvas.Title>
+          <Offcanvas.Title className="mt-2">
+            <img src={logo} alt="site logo" height="45" />
+          </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="mb-0 d-lg-none">

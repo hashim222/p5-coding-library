@@ -9,5 +9,11 @@
 }
 
 .ContextNavBarHeight {
-  min-height: 100vh;
+  min-height: 8vh;
+}
+
+@media (min-width: 992px) {
+  .ContextNavBarHeight {
+    min-height: 100vh;
+  }
 }
