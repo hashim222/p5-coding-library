@@ -26,3 +26,8 @@
     border-right: 1.5px solid #dadadf;
   }
 }
+
+a,
+a:hover {
+  text-decoration: none;
+}

@@ -8,7 +8,7 @@
 
 .NavLinkForLargerScreens {
   color: #49a6e9;
-  margin-top: 5px;
+  margin-top: 20px;
   text-align: center;
   font-size: 160%;
 }
@@ -18,11 +18,26 @@
   color: #547799;
 }
 
+.ActiveLarge {
+  color: #547799;
+}
+
 .NavLinksForSmallerScreens {
   text-align: center;
   font-size: 140%;
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: #49a6e9;
   border-radius: 20px;
   color: #ffffff;
+}
+
+.NavLinksForSmallerScreens:hover {
+  transition: color ease-in-out 0.2s;
+  color: #f1f5f8;
+  background-color: #547699c9;
+}
+
+.ActiveSmall {
+  color: #f1f5f8;
+  background-color: #547799;
 }
