@@ -13,9 +13,21 @@
   font-size: 160%;
 }
 
+/* Devices with a width larger than 1800 pixels */
+@media (min-width: 1800px) {
+  .NavLinkForLargerScreens {
+    margin-top: 50px;
+    font-size: 200%;
+  }
+}
+
 .NavLinkForLargerScreens:hover {
   transition: color ease-in-out 0.2s;
   color: #547799;
+}
+
+.NavLinkForLargerScreens > i {
+  font-size: 140%;
 }
 
 .ActiveLarge {

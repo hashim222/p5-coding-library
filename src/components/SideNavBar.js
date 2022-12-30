@@ -14,6 +14,7 @@ function ResponsiveExample() {
 
   return (
     <div className="mt-3">
+      {/* Side Navbar for smaller devices */}
       <div className={`${styles.NavBarMenuIcon} d-lg-none mt-2 mr-2 mr-md-3`}>
         <NavLink to="/">
           <img
@@ -32,8 +33,9 @@ function ResponsiveExample() {
         </Button>
       </div>
 
+      {/* Side Navbar for larger devices */}
       <div variant="info" className="d-none d-lg-block">
-        <Nav defaultActiveKey="/home" className="flex-column">
+        <Nav className="flex-column">
           <div className="mt-3 ml-3">
             <NavLink to="/">
               <img src={logo} alt="site logo" height="75" />
@@ -71,6 +73,7 @@ function ResponsiveExample() {
         </Nav>
       </div>
 
+      {/* Sliders in the navbar for smaller devices */}
       <Offcanvas show={show} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className="mt-2">

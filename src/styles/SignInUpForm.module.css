@@ -1,0 +1,15 @@
+.Row {
+  height: calc(100vh - 30vh);
+}
+
+@media (max-width: 992px) {
+  .Row {
+    height: calc(100vh - 60vh);
+  }
+}
+
+.Col {
+  background-color: #ffffff;
+  border: 1.5px solid #dadadf;
+  text-align: center;
+}

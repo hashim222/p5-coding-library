@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./App.module.css";
 import SideNavBar from "./components/SideNavBar";
 import { Route, Switch } from "react-router-dom";
+import "./api/axiosDefaults";
+import SignUpForm from "./pages/auth/SignUpForm";
 
 function App() {
   return (
@@ -13,19 +15,21 @@ function App() {
             lg={3}
             className={`${styles.NavBarBgColor} ${styles.ContextNavBarHeight}`}
           >
+            {/* Side Navbar */}
             <SideNavBar />
           </Col>
-          <Col lg={5}>
+          <Col lg={5} sm={8}>
             <Container>
               <Switch>
                 <Route exact path={"/"} render={() => <h1>Home Page</h1>} />
                 <Route exact path={"/about"} render={() => <h1>About</h1>} />
                 <Route exact path={"/signin"} render={() => <h1>Sign in</h1>} />
-                <Route exact path={"/signup"} render={() => <h1>Sign up</h1>} />
+                <Route exact path={"/signup"} render={() => <SignUpForm />} />
+                <Route render={() => <h1>Page not found</h1>} />
               </Switch>
             </Container>
           </Col>
-          <Col lg={4}>Column 3</Col>
+          <Col lg={4} sm={4}>Column 3</Col>
         </Row>
       </Container>
     </div>
