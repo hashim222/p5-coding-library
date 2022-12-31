@@ -12,13 +12,13 @@ function App() {
       <Container fluid>
         <Row>
           <Col
-            lg={3}
+            lg={2}
             className={`${styles.NavBarBgColor} ${styles.ContextNavBarHeight}`}
           >
             {/* Side Navbar */}
             <SideNavBar />
           </Col>
-          <Col lg={5} sm={8}>
+          <Col lg={6} sm={8}>
             <Container>
               <Switch>
                 <Route exact path={"/"} render={() => <h1>Home Page</h1>} />

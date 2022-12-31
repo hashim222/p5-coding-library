@@ -8,9 +8,9 @@
 
 .NavLinkForLargerScreens {
   color: #49a6e9;
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
-  font-size: 160%;
+  font-size: 140%;
 }
 
 /* Devices with a width larger than 1800 pixels */
