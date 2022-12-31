@@ -8,13 +8,14 @@ Devices with a width larger than 100 pixels
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    font-family: "Dosis", sans-serif;
   }
 }
 
 /* 
-Sign up Form and Sign in form.
-Devices with a width larger than 768 pixels 
-*/
+  Sign up Form and Sign in form.
+  Devices with a width larger than 768 pixels 
+  */
 @media (min-width: 768px) {
   .Row {
     margin-top: 60px;
@@ -23,9 +24,9 @@ Devices with a width larger than 768 pixels
 }
 
 /* 
-Sign up Form and Sign in form.
-Devices with a width larger than 992 pixels 
-*/
+  Sign up Form and Sign in form.
+  Devices with a width larger than 992 pixels 
+  */
 @media (min-width: 992px) {
   .Row {
     margin-top: 120px;
@@ -34,7 +35,7 @@ Devices with a width larger than 992 pixels
 }
 
 /* Sign up Form and Sign in form.
-Devices with a width larger than 1500 pixels  */
+  Devices with a width larger than 1500 pixels  */
 @media (min-width: 1500px) {
   .Row {
     margin-top: 150px;
@@ -46,16 +47,6 @@ Devices with a width larger than 1500 pixels  */
   background-color: #ffffff;
   border: 1.5px solid #dadadf;
   border-radius: 5px;
-}
-
-.Input {
-  background-color: #f1f5f8;
-  box-sizing: border-box;
-  border-radius: 10px;
-  text-align: center;
-  padding: 5px;
-  margin-bottom: 20px;
-  border: 1.5px solid #dadadf;
 }
 
 .Header {
@@ -70,20 +61,18 @@ Devices with a width larger than 1500 pixels  */
   margin-bottom: 10px;
 }
 
-.Link {
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  margin-bottom: 20px;
-  color: #49a6e9;
+.AboutBorderBottom {
+  border-top: 2px solid #547799;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.Link span {
+.AboutParagraphOne p {
+  background-color: #f1f5f8;
+  padding: 20px;
+}
+
+.AboutParagraphOne h3 {
   color: #547799;
-  border-bottom: 1px solid #49a6e9;
-}
-
-.Link span:hover,
-.Link:hover {
-  color: #0091f9;
 }

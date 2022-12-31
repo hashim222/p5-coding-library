@@ -26,7 +26,7 @@ function ResponsiveExample() {
         </NavLink>
         <Button
           style={{ backgroundColor: "#49a6e9" }}
-          className="d-lg-none float-end"
+          className="d-lg-none float-end rounded-4"
           onClick={handleShow}
         >
           <i class="fa-solid fa-bars"></i>
