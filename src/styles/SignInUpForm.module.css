@@ -1,5 +1,5 @@
 /* 
-Sign up Form.
+Sign up Form and Sign in form.
 Devices with a width larger than 100 pixels 
 */
 @media (min-width: 100px) {
@@ -12,7 +12,7 @@ Devices with a width larger than 100 pixels
 }
 
 /* 
-Sign up Form.
+Sign up Form and Sign in form.
 Devices with a width larger than 768 pixels 
 */
 @media (min-width: 768px) {
@@ -23,12 +23,21 @@ Devices with a width larger than 768 pixels
 }
 
 /* 
-Sign up Form.
+Sign up Form and Sign in form.
 Devices with a width larger than 992 pixels 
 */
 @media (min-width: 992px) {
   .Row {
-    margin-top: 91px;
+    margin-top: 120px;
+    width: 70%;
+  }
+}
+
+/* Sign up Form and Sign in form.
+Devices with a width larger than 1500 pixels  */
+@media (min-width: 1500px) {
+  .Row {
+    margin-top: 150px;
     width: 70%;
   }
 }
