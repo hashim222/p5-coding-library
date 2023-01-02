@@ -5,12 +5,15 @@ import Nav from "react-bootstrap/Nav";
 import styles from "../styles/SideNavBar.module.css";
 import logo from "../assets/site-logo.png";
 import { NavLink } from "react-router-dom";
+import UseClickOutsideToggle from "../hooks/UseClickOutsideToggle";
 
-function ResponsiveExample() {
+const SideNavBar = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const { expanded, setExpanded, ref } = UseClickOutsideToggle();
 
   return (
     <div className="mt-3">
@@ -27,9 +30,13 @@ function ResponsiveExample() {
         <Button
           style={{ backgroundColor: "#49a6e9" }}
           className="d-lg-none float-end rounded-4"
-          onClick={handleShow}
+          ref={ref}
+          onClick={() => {
+            handleShow();
+            setExpanded(!expanded);
+          }}
         >
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </Button>
       </div>
 
@@ -47,34 +54,34 @@ function ResponsiveExample() {
             activeClassName={styles.ActiveLarge}
             className={`${styles.NavLinkForLargerScreens} mt-5`}
           >
-            <i class="fa-solid fa-house"></i> Home
+            <i className="fa-solid fa-house"></i> Home
           </NavLink>
           <NavLink
             to="/about"
             activeClassName={styles.ActiveLarge}
             className={styles.NavLinkForLargerScreens}
           >
-            <i class="fa-solid fa-circle-info"></i> About
+            <i className="fa-solid fa-circle-info"></i> About
           </NavLink>
           <NavLink
             to="/signin"
             activeClassName={styles.ActiveLarge}
             className={styles.NavLinkForLargerScreens}
           >
-            <i class="fa-solid fa-right-to-bracket"></i> Sign in
+            <i className="fa-solid fa-right-to-bracket"></i> Sign in
           </NavLink>
           <NavLink
             to="signup"
             activeClassName={styles.ActiveLarge}
             className={styles.NavLinkForLargerScreens}
           >
-            <i class="fa-solid fa-user-plus"></i> Sign up
+            <i className="fa-solid fa-user-plus"></i> Sign up
           </NavLink>
         </Nav>
       </div>
 
       {/* Sliders in the navbar for smaller devices */}
-      <Offcanvas show={show} onHide={handleClose} responsive="lg">
+      <Offcanvas show={(show, expanded)} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className="mt-2">
             <NavLink to="/">
@@ -91,28 +98,28 @@ function ResponsiveExample() {
                 activeClassName={styles.ActiveSmall}
                 className={styles.NavLinksForSmallerScreens}
               >
-                <i class="fa-solid fa-house"></i>
+                <i className="fa-solid fa-house"></i>
               </NavLink>
               <NavLink
                 to="/about"
                 activeClassName={styles.ActiveSmall}
                 className={styles.NavLinksForSmallerScreens}
               >
-                <i class="fa-solid fa-circle-info"></i>
+                <i className="fa-solid fa-circle-info"></i>
               </NavLink>
               <NavLink
                 to="/signin"
                 activeClassName={styles.ActiveSmall}
                 className={styles.NavLinksForSmallerScreens}
               >
-                <i class="fa-solid fa-right-to-bracket"></i>
+                <i className="fa-solid fa-right-to-bracket"></i>
               </NavLink>
               <NavLink
                 to="/signup"
                 activeClassName={styles.ActiveSmall}
                 className={styles.NavLinksForSmallerScreens}
               >
-                <i class="fa-solid fa-user-plus"></i>
+                <i className="fa-solid fa-user-plus"></i>
               </NavLink>
             </Nav>
           </div>
@@ -120,6 +127,6 @@ function ResponsiveExample() {
       </Offcanvas>
     </div>
   );
-}
+};
 
-export default ResponsiveExample;
+export default SideNavBar;
