@@ -54,7 +54,7 @@ const SignInForm = () => {
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert variant="danger" key={idx}>
                 {message}
               </Alert>
             ))}
@@ -71,7 +71,7 @@ const SignInForm = () => {
               />
             </Form.Group>
             {errors.password?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+              <Alert key={idx} variant="danger">
                 {message}
               </Alert>
             ))}
@@ -83,7 +83,7 @@ const SignInForm = () => {
               Sign in
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
+              <Alert key={idx} variant="danger" className="mt-3">
                 {message}
               </Alert>
             ))}

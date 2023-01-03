@@ -21,7 +21,7 @@ Coding Library is a coding related community based social media website. Where u
 
     > Note: project flowchart was created before the project was created and may not match 100% with the final deployed.
 
-    ![responsive image for the site](./src/assets/readme-images/flowchart.png)
+    ![flowchart image](./src/assets/readme-images/flowchart.png)
 
 - ### Color scheme
 - ### Font Used

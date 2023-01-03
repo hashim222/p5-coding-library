@@ -21,11 +21,10 @@ function App() {
             <SideNavBar />
           </Col>
           <Col
-            style={{ paddingLeft: "250px" }}
-            lg={6}
+            lg={{ span: 6, offset: 2 }}
             sm={{ span: 8, order: "first" }}
             xs={{ order: "last" }}
-            className="pt-5 pt-lg-0"
+            className="gx-0 gx-sm-1 pt-3 pt-sm-5 pt-lg-0"
           >
             <Container>
               <Switch>
@@ -42,11 +41,13 @@ function App() {
             </Container>
           </Col>
           <Col lg={4} sm={{ span: 4, order: "last" }} xs={{ order: "first" }}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
-              recusandae hic totam obcaecati fugit adipisci perferendis nihil
-              veritatis quibusdam laborum?
-            </p>
+            <Container>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+                recusandae hic totam obcaecati fugit adipisci perferendis nihil
+                veritatis quibusdam laborum?
+              </p>
+            </Container>
           </Col>
         </Row>
       </Container>
