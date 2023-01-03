@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useContext, useState } from "react";
 import { Button } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
@@ -6,8 +6,47 @@ import styles from "../styles/SideNavBar.module.css";
 import logo from "../assets/site-logo.png";
 import { NavLink } from "react-router-dom";
 import UseClickOutsideToggle from "../hooks/UseClickOutsideToggle";
+import { CurrentUserContext } from "../App";
 
 const SideNavBar = () => {
+  const currentUser = useContext(CurrentUserContext);
+  const loggedInIcons = <>{currentUser?.username}</>;
+  const loggedOutIcons = (
+    <>
+      {/* loggedOutIcons for larger devices */}
+      <NavLink
+        to="/signin"
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
+      >
+        <i className="fa-solid fa-right-to-bracket"></i> Sign in
+      </NavLink>
+      <NavLink
+        to="signup"
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
+      >
+        <i className="fa-solid fa-user-plus"></i> Sign up
+      </NavLink>
+
+      {/* loggedOutIcons for smaller devices */}
+      <NavLink
+        to="/signin"
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <i className="fa-solid fa-right-to-bracket"></i>
+      </NavLink>
+      <NavLink
+        to="/signup"
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <i className="fa-solid fa-user-plus"></i>
+      </NavLink>
+    </>
+  );
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -17,7 +56,7 @@ const SideNavBar = () => {
 
   return (
     <div className="mt-3">
-      {/* Side Navbar for smaller devices */}
+      {/* Toggle side navbar */}
       <div className={`${styles.NavBarMenuIcon} d-lg-none mt-2 mr-2 mr-md-3`}>
         <NavLink to="/">
           <img
@@ -63,24 +102,11 @@ const SideNavBar = () => {
           >
             <i className="fa-solid fa-circle-info"></i> About
           </NavLink>
-          <NavLink
-            to="/signin"
-            activeClassName={styles.ActiveLarge}
-            className={styles.NavLinkForLargerScreens}
-          >
-            <i className="fa-solid fa-right-to-bracket"></i> Sign in
-          </NavLink>
-          <NavLink
-            to="signup"
-            activeClassName={styles.ActiveLarge}
-            className={styles.NavLinkForLargerScreens}
-          >
-            <i className="fa-solid fa-user-plus"></i> Sign up
-          </NavLink>
+          {currentUser ? loggedInIcons : loggedOutIcons}
         </Nav>
       </div>
 
-      {/* Sliders in the navbar for smaller devices */}
+      {/* Side Navbar for smaller devices */}
       <Offcanvas show={(show, expanded)} onHide={handleClose} responsive="lg">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title className="mt-2">
@@ -107,20 +133,7 @@ const SideNavBar = () => {
               >
                 <i className="fa-solid fa-circle-info"></i>
               </NavLink>
-              <NavLink
-                to="/signin"
-                activeClassName={styles.ActiveSmall}
-                className={styles.NavLinksForSmallerScreens}
-              >
-                <i className="fa-solid fa-right-to-bracket"></i>
-              </NavLink>
-              <NavLink
-                to="/signup"
-                activeClassName={styles.ActiveSmall}
-                className={styles.NavLinksForSmallerScreens}
-              >
-                <i className="fa-solid fa-user-plus"></i>
-              </NavLink>
+              {currentUser ? loggedInIcons : loggedOutIcons}
             </Nav>
           </div>
         </Offcanvas.Body>
