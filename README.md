@@ -19,7 +19,7 @@ Coding Library is a coding related community based social media website. Where u
 
   - Flowchart was created before I created the project, which gave me an idea of which user has access to which page and what each link should be doing.
 
-    > Note: project flowchart was created before the project was created and may not match 100% with the final deployed.
+    > Note: Flowchart was created before starting the project but forgot to include `Create Posts` for logged in users. Therefore, the flowchart may not match 100% with the final deployed version.
 
     ![flowchart image](./src/assets/readme-images/flowchart.png)
 

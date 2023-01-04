@@ -11,7 +11,7 @@
   color: #49a6e9;
   margin-top: 30px;
   text-align: center;
-  font-size: 140%;
+  font-size: 120%;
 }
 
 /* Devices with a width larger than 1800 pixels */
@@ -27,8 +27,8 @@
   color: #547799;
 }
 
-.NavLinkForLargerScreens > i {
-  font-size: 140%;
+.NavLinkForLargerScreens i {
+  font-size: 120%;
 }
 
 .ActiveLarge {
@@ -48,6 +48,13 @@
   transition: color ease-in-out 0.2s;
   color: #f1f5f8;
   background-color: #547699c9;
+}
+
+.NavLinksForSmallerScreens:last-of-type {
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+  color: #547799;
 }
 
 .ActiveSmall {

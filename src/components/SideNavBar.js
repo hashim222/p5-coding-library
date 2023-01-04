@@ -2,15 +2,138 @@ import { React, useState } from "react";
 import { Button } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 import styles from "../styles/SideNavBar.module.css";
 import logo from "../assets/site-logo.png";
 import { NavLink } from "react-router-dom";
 import UseClickOutsideToggle from "../hooks/UseClickOutsideToggle";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const SideNavBar = () => {
   const currentUser = useCurrentUser();
-  const loggedInIcons = <>{currentUser?.username}</>;
+  const loggedInIcons = (
+    <>
+      {/* loggedInIcons for larger devices */}
+      <NavLink
+        to="/posts/create_topic"
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
+      >
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Create Topic</Tooltip>}
+        >
+          <span>
+            <i className="fa-solid fa-square-plus"></i> Create
+          </span>
+        </OverlayTrigger>
+      </NavLink>
+
+      <NavLink
+        to="/followings_feed"
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
+      >
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Followings Feed</Tooltip>}
+        >
+          <span>
+            <i className="fa-solid fa-square-rss"></i> Feeds
+          </span>
+        </OverlayTrigger>
+      </NavLink>
+
+      <NavLink
+        to="/bookmarked_topics"
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
+      >
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Bookmarked Topics</Tooltip>}
+        >
+          <span>
+            <i className="fa-solid fa-star"></i> Bookmarked
+          </span>
+        </OverlayTrigger>
+      </NavLink>
+
+      <NavLink
+        to="/logout"
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
+      >
+        <OverlayTrigger placement="bottom" overlay={<Tooltip>Logout</Tooltip>}>
+          <span>
+            <i className="fa-solid fa-right-from-bracket"></i> Logout
+          </span>
+        </OverlayTrigger>
+      </NavLink>
+
+      <hr className="mt-4 d-none d-lg-block" />
+
+      <NavLink
+        to={`/profiles/${currentUser?.profile_id}`}
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} mt-0 d-none d-lg-block`}
+      >
+        <Avatar
+          src={currentUser?.profile_image}
+          height={60}
+          alt="large avatar image"
+        />
+      </NavLink>
+
+      {/* loggedInIcons for smaller devices */}
+      <NavLink
+        to="/posts/create_topic"
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <i className="fa-solid fa-square-plus"></i>
+      </NavLink>
+
+      <NavLink
+        to="/followings_feed"
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <i className="fa-solid fa-square-rss"></i>
+      </NavLink>
+
+      <NavLink
+        to="/bookmarked_topics"
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <i className="fa-solid fa-star"></i>
+      </NavLink>
+
+      <NavLink
+        to="/logout"
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <i className="fa-solid fa-right-from-bracket"></i>
+      </NavLink>
+
+      <NavLink
+        to={`/profiles/${currentUser?.profile_id}`}
+        // activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <Avatar
+          src={currentUser?.profile_image}
+          text="My Profile"
+          height={80}
+          alt="small avatar image"
+        />
+      </NavLink>
+    </>
+  );
   const loggedOutIcons = (
     <>
       {/* loggedOutIcons for larger devices */}
@@ -21,6 +144,7 @@ const SideNavBar = () => {
       >
         <i className="fa-solid fa-right-to-bracket"></i> Sign in
       </NavLink>
+
       <NavLink
         to="signup"
         activeClassName={styles.ActiveLarge}
@@ -37,6 +161,7 @@ const SideNavBar = () => {
       >
         <i className="fa-solid fa-right-to-bracket"></i>
       </NavLink>
+
       <NavLink
         to="/signup"
         activeClassName={styles.ActiveSmall}
@@ -66,6 +191,7 @@ const SideNavBar = () => {
             className="d-lg-none ml-md-3 ml-2 mt-0.5"
           />
         </NavLink>
+
         <Button
           style={{ backgroundColor: "#49a6e9" }}
           className="d-lg-none float-end rounded-4"
@@ -87,21 +213,38 @@ const SideNavBar = () => {
               <img src={logo} alt="site logo" height="75" />
             </NavLink>
           </div>
+
           <NavLink
             exact
             to="/"
             activeClassName={styles.ActiveLarge}
             className={`${styles.NavLinkForLargerScreens} mt-5`}
           >
-            <i className="fa-solid fa-house"></i> Home
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>Home</Tooltip>}
+            >
+              <span>
+                <i className="fa-solid fa-house"></i> Home
+              </span>
+            </OverlayTrigger>
           </NavLink>
+
           <NavLink
             to="/about"
             activeClassName={styles.ActiveLarge}
             className={styles.NavLinkForLargerScreens}
           >
-            <i className="fa-solid fa-circle-info"></i> About
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>About</Tooltip>}
+            >
+              <span>
+                <i className="fa-solid fa-circle-info"></i> About Us
+              </span>
+            </OverlayTrigger>
           </NavLink>
+
           {currentUser ? loggedInIcons : loggedOutIcons}
         </Nav>
       </div>
@@ -126,6 +269,7 @@ const SideNavBar = () => {
               >
                 <i className="fa-solid fa-house"></i>
               </NavLink>
+
               <NavLink
                 to="/about"
                 activeClassName={styles.ActiveSmall}
@@ -133,6 +277,7 @@ const SideNavBar = () => {
               >
                 <i className="fa-solid fa-circle-info"></i>
               </NavLink>
+
               {currentUser ? loggedInIcons : loggedOutIcons}
             </Nav>
           </div>
