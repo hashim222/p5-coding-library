@@ -1,4 +1,4 @@
-import { React, useContext, useState } from "react";
+import { React, useState } from "react";
 import { Button } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
@@ -6,10 +6,10 @@ import styles from "../styles/SideNavBar.module.css";
 import logo from "../assets/site-logo.png";
 import { NavLink } from "react-router-dom";
 import UseClickOutsideToggle from "../hooks/UseClickOutsideToggle";
-import { CurrentUserContext } from "../App";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const SideNavBar = () => {
-  const currentUser = useContext(CurrentUserContext);
+  const currentUser = useCurrentUser();
   const loggedInIcons = <>{currentUser?.username}</>;
   const loggedOutIcons = (
     <>
