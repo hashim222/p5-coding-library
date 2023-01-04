@@ -50,13 +50,6 @@
   background-color: #547699c9;
 }
 
-.NavLinksForSmallerScreens:last-of-type {
-  margin-top: 20px;
-  background-color: white;
-  padding: 10px;
-  color: #547799;
-}
-
 .ActiveSmall {
   color: #f1f5f8;
   background-color: #547799;

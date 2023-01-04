@@ -8,11 +8,26 @@ import styles from "../styles/SideNavBar.module.css";
 import logo from "../assets/site-logo.png";
 import { NavLink } from "react-router-dom";
 import UseClickOutsideToggle from "../hooks/UseClickOutsideToggle";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import {
+  useCurrentUser,
+  useSetCurrentUser,
+} from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
+import axios from "axios";
 
 const SideNavBar = () => {
   const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
+
+  const handleLogout = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const loggedInIcons = (
     <>
       {/* loggedInIcons for larger devices */}
@@ -62,8 +77,8 @@ const SideNavBar = () => {
       </NavLink>
 
       <NavLink
-        to="/logout"
-        activeClassName={styles.ActiveLarge}
+        to="/"
+        onClick={handleLogout}
         className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
       >
         <OverlayTrigger placement="bottom" overlay={<Tooltip>Logout</Tooltip>}>
@@ -113,8 +128,8 @@ const SideNavBar = () => {
       </NavLink>
 
       <NavLink
-        to="/logout"
-        activeClassName={styles.ActiveSmall}
+        to="/"
+        onClick={handleLogout}
         className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
       >
         <i className="fa-solid fa-right-from-bracket"></i>
@@ -122,8 +137,9 @@ const SideNavBar = () => {
 
       <NavLink
         to={`/profiles/${currentUser?.profile_id}`}
-        // activeClassName={styles.ActiveSmall}
-        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none bg-white mt-4 m-3`}
+        style={{ color: "#547799" }}
       >
         <Avatar
           src={currentUser?.profile_image}
@@ -134,6 +150,7 @@ const SideNavBar = () => {
       </NavLink>
     </>
   );
+
   const loggedOutIcons = (
     <>
       {/* loggedOutIcons for larger devices */}
