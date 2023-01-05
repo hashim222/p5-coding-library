@@ -6,6 +6,11 @@
   background-color: #547799;
 }
 
+.LogoutModalButton:hover {
+  background-color: #547799;
+  opacity: 0.9;
+}
+
 .LogoutModalBody {
   color: #547799;
 }

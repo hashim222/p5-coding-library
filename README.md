@@ -19,13 +19,14 @@ Coding Library is a coding related community based social media website. Where u
 
   - Flowchart was created before I created the project, which gave me an idea of which user has access to which page and what each link should be doing.
 
-    > Note: Flowchart was created before starting the project but forgot to include `Create Posts` for logged in users. Therefore, the flowchart may not match 100% with the final deployed version.
+    > Note: Flowchart was created before starting the project but forgot to include `Create Posts` for logged in users. Therefore, the flowchart may not match 100% with the final deployed version due to changes were made in the development.
 
     ![flowchart image](./src/assets/readme-images/flowchart.png)
 
 - ### Color scheme
 - ### Font Used
 - ### Wireframe
+  - Site wireframe can be seen in the [wireframe.md](wireframe.md) file
 - ### User Stories
 - ### Admin Stories
 
