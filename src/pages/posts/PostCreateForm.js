@@ -5,7 +5,15 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import textStyle from "../../styles/Asset.module.css";
 import Asset from "../../components/Asset";
-import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  Image,
+  Row,
+  Alert,
+} from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -49,10 +57,9 @@ function PostCreateForm() {
     try {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
-    } catch (err) {
-      console.log(err);
-      if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
+    } catch (error) {
+      if (error.response?.status !== 401) {
+        setErrors(error.response?.data);
       }
     }
   };
@@ -71,6 +78,11 @@ function PostCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.title?.map((message, idx) => (
+        <Alert variant="danger" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label className={textStyle.MessageText}>Caption</Form.Label>
@@ -83,9 +95,14 @@ function PostCreateForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.caption?.map((message, idx) => (
+        <Alert variant="danger" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Button
-        className={`${btnStyles.FormBtns} ${btnStyles.Button} mt-3 mt-md-4`}
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} mt-3 mt-md-4 mb-0 mb-md-2`}
         onClick={() => {
           history.goBack();
         }}
@@ -93,7 +110,7 @@ function PostCreateForm() {
         cancel
       </Button>
       <Button
-        className={`${btnStyles.FormBtns} ${btnStyles.Button} mt-3 mt-md-4`}
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} mt-3 mt-md-4 mb-0 mb-md-2`}
         type="submit"
       >
         create
@@ -142,6 +159,12 @@ function PostCreateForm() {
                 ref={imageInput}
               />
             </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="danger" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
