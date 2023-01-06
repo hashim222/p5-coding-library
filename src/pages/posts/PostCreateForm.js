@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import Asset from "../../components/Asset";
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -41,7 +42,7 @@ function PostCreateForm() {
                 className="d-flex justify-content-center"
                 htmlFor="image-upload"
               >
-                ASSET
+                <Asset icon="fa-solid fa-upload" message="Upload a picture" />
               </Form.Label>
             </Form.Group>
             <div className="d-md-none">{textFields}</div>

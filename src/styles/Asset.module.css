@@ -1,0 +1,18 @@
+.Asset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+.UploadIcon {
+  font-size: 200%;
+  background-color: #49a6e9;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.UploadMessageText {
+  color: #547799;
+}
