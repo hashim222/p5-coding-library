@@ -10,7 +10,7 @@ const About = () => {
           <h1 className={styles.Header}>About Page</h1>
           <hr className={styles.AboutBorderBottom} />
 
-          <div className={styles.AboutParagraphOne}>
+          <div className={styles.AboutContent}>
             <h3>Welcome to the Coding Library website!</h3>
             <p>
               Coding library is a coding related social media website where

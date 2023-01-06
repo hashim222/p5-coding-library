@@ -45,7 +45,13 @@ Coding Library is a coding related community based social media website. Where u
 ## Technologies Used
 
 - ### Language Used
+  - [HTML](https://www.w3schools.com/html/)
+  - [CSS](https://www.w3schools.com/css/)
+  - [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 - ### Libraries/Framework Used
+  - [Bootstrap5](https://getbootstrap.com/)
+  - [React-Bootstrap5](https://react-bootstrap.github.io/)
+  - [React js](https://getbootstrap.com/)
 - ### Other Technologies
 
 ## Components

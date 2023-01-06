@@ -1,9 +1,7 @@
 import React, { useRef, useState } from "react";
-
-import appStyles from "../../App.module.css";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import textStyle from "../../styles/Asset.module.css";
+import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import {
   Button,
@@ -65,15 +63,15 @@ function PostCreateForm() {
   };
 
   const textFields = (
-    <div className="text-center">
+    <div className="text-center pt-0 pt-md-4">
       <Form.Group>
-        <Form.Label className={textStyle.MessageText}>
+        <Form.Label className={appStyles.DarkBluishcColor}>
           Title of topic
         </Form.Label>
         <Form.Control
           type="text"
           name="title"
-          className={styles.Input}
+          className={appStyles.Input}
           value={title}
           onChange={handleChange}
         />
@@ -85,12 +83,12 @@ function PostCreateForm() {
       ))}
 
       <Form.Group>
-        <Form.Label className={textStyle.MessageText}>Caption</Form.Label>
+        <Form.Label className={appStyles.DarkBluishcColor}>Caption</Form.Label>
         <Form.Control
           as="textarea"
           rows={6}
           name="caption"
-          className={styles.Input}
+          className={appStyles.Input}
           value={caption}
           onChange={handleChange}
         />

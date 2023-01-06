@@ -1,6 +1,6 @@
 /* 
-Sign up Form and Sign in form.
-Devices with a width larger than 100 pixels 
+  Sign up Form and Sign in form.
+  Devices with a width larger than 100 pixels 
 */
 @media (min-width: 100px) {
   .Row {
@@ -16,7 +16,7 @@ Devices with a width larger than 100 pixels
 /* 
   Sign up Form and Sign in form.
   Devices with a width larger than 768 pixels 
-  */
+*/
 @media (min-width: 768px) {
   .Row {
     margin-top: 60px;
@@ -27,7 +27,7 @@ Devices with a width larger than 100 pixels
 /* 
   Sign up Form and Sign in form.
   Devices with a width larger than 992 pixels 
-  */
+*/
 @media (min-width: 992px) {
   .Row {
     margin-top: 120px;
@@ -35,8 +35,10 @@ Devices with a width larger than 100 pixels
   }
 }
 
-/* Sign up Form and Sign in form.
-  Devices with a width larger than 1500 pixels  */
+/* 
+  Sign up Form and Sign in form.
+  Devices with a width larger than 1500 pixels  
+*/
 @media (min-width: 1500px) {
   .Row {
     margin-top: 150px;
@@ -69,11 +71,11 @@ Devices with a width larger than 100 pixels
   margin-right: auto;
 }
 
-.AboutParagraphOne p {
+.AboutContent p {
   background-color: #f1f5f8;
   padding: 20px;
 }
 
-.AboutParagraphOne h3 {
+.AboutContent h3 {
   color: #547799;
 }

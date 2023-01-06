@@ -40,6 +40,16 @@ input[type="file"] {
   display: none;
 }
 
+.Input {
+  background-color: #f1f5f8;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1.5px solid #dadadf;
+}
+
 figure {
   text-align: center;
   display: inline-block;
@@ -49,6 +59,28 @@ figure {
   max-height: 40vh;
   max-width: 100%;
   object-fit: contain;
+}
+
+.DarkBluishcColor {
+  color: #547799;
+}
+
+.Link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+  color: #49a6e9;
+}
+
+.Link span {
+  color: #547799;
+  border-bottom: 1px solid #49a6e9;
+}
+
+.Link span:hover,
+.Link:hover {
+  color: #0091f9;
 }
 
 /* scrollbar */

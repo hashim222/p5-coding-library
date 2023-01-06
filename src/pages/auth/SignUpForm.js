@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import appStyles from "../../App.module.css";
 
 import { Col, Row, Container, Form, Button, Alert } from "react-bootstrap";
 import axios from "axios";
@@ -45,7 +46,7 @@ const SignUpForm = () => {
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={appStyles.Input}
                 type="text"
                 placeholder="Username"
                 name="username"
@@ -62,7 +63,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={appStyles.Input}
                 type="password"
                 placeholder="Password"
                 name="password1"
@@ -79,7 +80,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Password(again)</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={appStyles.Input}
                 type="password"
                 placeholder="Password(again)"
                 name="password2"
@@ -94,7 +95,7 @@ const SignUpForm = () => {
             ))}
 
             <Button
-              className={`${btnStyles.Button} ${btnStyles.SubmitBtnBg}`}
+              className={`${btnStyles.Button} ${btnStyles.FormBtns}`}
               type="submit"
             >
               Sign up
@@ -107,7 +108,7 @@ const SignUpForm = () => {
           </Form>
         </Container>
         <Container className="mt-1">
-          <Link className={styles.Link} to="/signin">
+          <Link className={appStyles.Link} to="/signin">
             Already have an account? Then please <span>Sign in</span>
           </Link>
         </Container>

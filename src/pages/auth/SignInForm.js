@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import appStyles from "../../App.module.css";
 
 import { Col, Row, Container, Form, Button, Alert } from "react-bootstrap";
 import axios from "axios";
@@ -48,7 +49,7 @@ const SignInForm = () => {
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={appStyles.Input}
                 type="text"
                 placeholder="Username"
                 name="username"
@@ -65,7 +66,7 @@ const SignInForm = () => {
             <Form.Group controlId="password">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={appStyles.Input}
                 type="password"
                 placeholder="Password"
                 name="password"
@@ -80,7 +81,7 @@ const SignInForm = () => {
             ))}
 
             <Button
-              className={`${btnStyles.Button} ${btnStyles.SubmitBtnBg}`}
+              className={`${btnStyles.Button} ${btnStyles.FormBtns}`}
               type="submit"
             >
               Sign in
@@ -93,7 +94,7 @@ const SignInForm = () => {
           </Form>
         </Container>
         <Container className="mt-1">
-          <Link className={styles.Link} to="/signup">
+          <Link className={appStyles.Link} to="/signup">
             Dont have an account yet? Then please <span>Sign up</span>
           </Link>
         </Container>
