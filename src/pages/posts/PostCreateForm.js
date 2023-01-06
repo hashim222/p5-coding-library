@@ -6,17 +6,20 @@ import btnStyles from "../../styles/Button.module.css";
 import textStyle from "../../styles/Asset.module.css";
 import Asset from "../../components/Asset";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+import { axiosReq } from "../../api/axiosDefaults";
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
   const imageInput = useRef(null);
+  const history = useHistory();
 
   const [postData, setPostData] = useState({
     title: "",
-    content: "",
+    caption: "",
     image: "",
   });
-  const { title, content, image } = postData;
+  const { title, caption, image } = postData;
 
   const handleChange = (event) => {
     setPostData({
@@ -35,10 +38,31 @@ function PostCreateForm() {
     }
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("caption", caption);
+    formData.append("image", imageInput.current.files[0]);
+
+    try {
+      const { data } = await axiosReq.post("/posts/", formData);
+      history.push(`/posts/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label className={textStyle.MessageText}>Title</Form.Label>
+        <Form.Label className={textStyle.MessageText}>
+          Title of topic
+        </Form.Label>
         <Form.Control
           type="text"
           name="title"
@@ -49,20 +73,22 @@ function PostCreateForm() {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label className={textStyle.MessageText}>Content</Form.Label>
+        <Form.Label className={textStyle.MessageText}>Caption</Form.Label>
         <Form.Control
           as="textarea"
           rows={6}
-          name="content"
+          name="caption"
           className={styles.Input}
-          value={content}
+          value={caption}
           onChange={handleChange}
         />
       </Form.Group>
 
       <Button
         className={`${btnStyles.FormBtns} ${btnStyles.Button} mt-3 mt-md-4`}
-        onClick={() => {}}
+        onClick={() => {
+          history.goBack();
+        }}
       >
         cancel
       </Button>
@@ -76,7 +102,7 @@ function PostCreateForm() {
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
