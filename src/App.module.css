@@ -45,6 +45,12 @@ figure {
   display: inline-block;
 }
 
+.Image {
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /* scrollbar */
 *::-webkit-scrollbar {
   width: 5px;

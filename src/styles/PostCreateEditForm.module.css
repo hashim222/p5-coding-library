@@ -1,4 +1,26 @@
 .Container {
   min-height: 343px;
   background-color: #ffffff;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .Container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Container {
+    width: 100%;
+  }
+}
+
+.Container {
+  min-height: 343px;
+  background-color: #ffffff;
+}
+
+.Input {
+  background-color: #f1f5f8;
 }

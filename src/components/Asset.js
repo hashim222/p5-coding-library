@@ -9,7 +9,7 @@ const Asset = ({ spinner, src, message, icon }) => {
       {src && <img src={src} alt={message} />}
       {icon && <i className={`${styles.UploadIcon} ${icon} p-3 p-md-4`}></i>}
       {message && (
-        <p className={`${styles.UploadMessageText} mt-4`}>{message}</p>
+        <p className={`${styles.MessageText} fw-bold mt-4`}>{message}</p>
       )}
     </div>
   );
