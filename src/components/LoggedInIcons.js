@@ -5,6 +5,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import styles from "../styles/SideNavBar.module.css";
 import modalStyles from "../styles/LogoutModal.module.css";
+import btnStyles from "../styles/Button.module.css";
 import { NavLink, useHistory } from "react-router-dom";
 import Avatar from "./Avatar";
 import axios from "axios";
@@ -168,11 +169,12 @@ const LoggedInIcons = () => {
           <Modal.Footer>
             <Button
               onClick={handleClose}
-              className={modalStyles.LogoutModalButton}
+              className={`${modalStyles.LogoutModalButton} ${btnStyles.Button}`}
             >
               No
             </Button>
             <Button
+              className={btnStyles.Button}
               variant="danger"
               onClick={() => {
                 handleLogout();
