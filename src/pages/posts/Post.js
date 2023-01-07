@@ -15,6 +15,7 @@ const Post = (props) => {
     profile_image,
     comments_count,
     bookmark_id,
+    bookmark_count,
     like_id,
     likes_count,
     title,
@@ -52,6 +53,46 @@ const Post = (props) => {
         results: prevPosts.results.map((post) => {
           return post.id === id
             ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleBookmarkPosts = async () => {
+    try {
+      const { data } = await axiosRes.post("/bookmarks/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? {
+                ...post,
+                bookmark_count: post.bookmark_count + 1,
+                bookmark_id: data.id,
+              }
+            : post;
+        }),
+      }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleUnbookmarkPosts = async () => {
+    try {
+      await axiosRes.delete(`/bookmarks/${bookmark_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? {
+                ...post,
+                bookmark_count: post.bookmark_count - 1,
+                bookmark_id: null,
+              }
             : post;
         }),
       }));
@@ -127,11 +168,11 @@ const Post = (props) => {
               <i className="far fa-star" />
             </OverlayTrigger>
           ) : bookmark_id ? (
-            <span onClick={() => {}}>
+            <span onClick={handleUnbookmarkPosts}>
               <i className={`fas fa-star ${styles.LikeBookmark}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
+            <span onClick={handleBookmarkPosts}>
               <i className={`far fa-star ${styles.LikeBookmarkOutline}`} />
             </span>
           ) : (
