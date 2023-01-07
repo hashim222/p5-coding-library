@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useParams } from "react-router-dom";
+import Post from "./Post";
 
 const PostPageContent = () => {
   const { id } = useParams();
@@ -27,9 +28,9 @@ const PostPageContent = () => {
   }, [id]);
 
   return (
-    <Row>
+    <Row className="mt-5">
       <Col>
-        <p>Post Components</p>
+        <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container>Post Comments</Container>
       </Col>
     </Row>

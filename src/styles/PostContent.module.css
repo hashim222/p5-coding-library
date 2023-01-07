@@ -1,0 +1,11 @@
+.Post {
+  background-color: #ffffff;
+  border: 1px solid #dadadf;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.PostInfo {
+  border-top: 3px solid #dadadf;
+}

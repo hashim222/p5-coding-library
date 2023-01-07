@@ -15,7 +15,7 @@ import {
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function PostCreateForm() {
+const PostCreateForm = () => {
   const [errors, setErrors] = useState({});
   const imageInput = useRef(null);
   const history = useHistory();
@@ -176,6 +176,6 @@ function PostCreateForm() {
       </Row>
     </Form>
   );
-}
+};
 
 export default PostCreateForm;

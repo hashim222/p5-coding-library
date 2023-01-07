@@ -150,7 +150,7 @@ const LoggedInIcons = () => {
       >
         <Avatar
           src={currentUser?.profile_image}
-          text="My Profile"
+          text={"My Profile"}
           height={80}
           alt="small avatar image"
         />
