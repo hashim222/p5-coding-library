@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/Avatar.module.css";
 
-const Avatar = ({ src, height = 45 }) => {
+const Avatar = ({ src, text, height = 45 }) => {
   return (
     <span>
       <img
@@ -11,7 +11,7 @@ const Avatar = ({ src, height = 45 }) => {
         width={height}
         alt=""
       />
-      <small>My profile</small>
+      {text}
     </span>
   );
 };

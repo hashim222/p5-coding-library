@@ -106,6 +106,7 @@ const LoggedInIcons = () => {
           src={currentUser?.profile_image}
           height={60}
           alt="large avatar image"
+          text="My Profile"
         />
       </NavLink>
 
@@ -150,7 +151,7 @@ const LoggedInIcons = () => {
       >
         <Avatar
           src={currentUser?.profile_image}
-          text={"My Profile"}
+          text="My Profile"
           height={80}
           alt="small avatar image"
         />

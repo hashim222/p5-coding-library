@@ -5,6 +5,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
   const {
@@ -21,10 +22,43 @@ const Post = (props) => {
     image,
     updated_on,
     postPage,
+    setPosts,
   } = props;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/likes/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleUnlike = async () => {
+    try {
+      await axiosRes.delete(`/likes/${like_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <Card className={styles.Post}>
@@ -38,6 +72,7 @@ const Post = (props) => {
             className={appStyles.LightBluishcColor}
           >
             <Avatar src={profile_image} height={50} />
+            {owner}
           </Link>
         </div>
         <div className="mt-4">
@@ -62,12 +97,12 @@ const Post = (props) => {
               <i className="far fa-thumbs-up" />
             </OverlayTrigger>
           ) : like_id ? (
-            <span onClick={() => {}}>
-              <i className={`fas fa-thumbs-up ${styles.LikeAndBookmark}`} />
+            <span onClick={handleUnlike}>
+              <i className={`fas fa-thumbs-up ${styles.LikeBookmark}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
-              <i className={`far fa-thumbs-up`} />
+            <span onClick={handleLike}>
+              <i className={`far fa-thumbs-up ${styles.LikeBookmarkOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
@@ -93,11 +128,11 @@ const Post = (props) => {
             </OverlayTrigger>
           ) : bookmark_id ? (
             <span onClick={() => {}}>
-              <i className={`fas fa-star ${styles.LikeAndBookmark}`} />
+              <i className={`fas fa-star ${styles.LikeBookmark}`} />
             </span>
           ) : currentUser ? (
             <span onClick={() => {}}>
-              <i className={`far fa-star`} />
+              <i className={`far fa-star ${styles.LikeBookmarkOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
