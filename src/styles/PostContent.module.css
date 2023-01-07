@@ -4,8 +4,21 @@
   border-radius: 8px;
   margin-bottom: 16px;
   text-align: center;
+  color: #547799;
 }
 
-.PostInfo {
-  border-top: 3px solid #dadadf;
+.PostIcons i {
+  font-size: 160%;
+  cursor: pointer;
+  margin: 10px 5px 20px 5px;
+  color: #54769991;
+}
+
+.PostIcons i:hover {
+  font-size: 160%;
+  color: #49a6e9;
+}
+
+.LikeAndBookmark {
+  color: #49a6e9;
 }

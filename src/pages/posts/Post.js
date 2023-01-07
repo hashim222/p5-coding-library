@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/PostContent.module.css";
+import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -27,9 +28,15 @@ const Post = (props) => {
 
   return (
     <Card className={styles.Post}>
-      <Card.Body className="d-flex justify-content-between">
+      <Card.Body
+        className="d-flex justify-content-between"
+        style={{ borderBottom: "1px solid #dadadf" }}
+      >
         <div>
-          <Link to={`/profiles/${profile_id}`}>
+          <Link
+            to={`/profiles/${profile_id}`}
+            className={appStyles.LightBluishcColor}
+          >
             <Avatar src={profile_image} height={50} />
           </Link>
         </div>
@@ -41,10 +48,11 @@ const Post = (props) => {
       <Link to={`/posts/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
-      <Card.Body className={styles.PostInfo}>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {caption && <Card.Text>{caption}</Card.Text>}
-        <div style={{ backgroundColor: "yellow" }}>
+      <Card.Body
+        className={styles.PostInfo}
+        style={{ borderTop: "1px solid #dadadf" }}
+      >
+        <div className={`${styles.PostIcons} text-center text-md-start`}>
           {/* Like posts */}
           {is_owner ? (
             <OverlayTrigger
@@ -55,7 +63,7 @@ const Post = (props) => {
             </OverlayTrigger>
           ) : like_id ? (
             <span onClick={() => {}}>
-              <i className={`fas fa-thumbs-up`} />
+              <i className={`fas fa-thumbs-up ${styles.LikeAndBookmark}`} />
             </span>
           ) : currentUser ? (
             <span onClick={() => {}}>
@@ -70,7 +78,7 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
-          <Link to={`/posts/${id}`}>
+          <Link to={`/posts/${id}`} className={appStyles.DarkBluishcColor}>
             <i className="far fa-comments" />
           </Link>
           {comments_count}
@@ -85,7 +93,7 @@ const Post = (props) => {
             </OverlayTrigger>
           ) : bookmark_id ? (
             <span onClick={() => {}}>
-              <i className={`fas fa-star`} />
+              <i className={`fas fa-star ${styles.LikeAndBookmark}`} />
             </span>
           ) : currentUser ? (
             <span onClick={() => {}}>
@@ -100,6 +108,8 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
         </div>
+        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        {caption && <Card.Text>{caption}</Card.Text>}
       </Card.Body>
     </Card>
   );
