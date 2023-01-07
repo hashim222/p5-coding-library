@@ -8,6 +8,7 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import About from "./pages/About";
 import PostCreateForm from "./pages/posts/PostCreateForm";
+import PostPageContent from "./pages/posts/PostPageContent";
 
 function App() {
   return (
@@ -42,17 +43,21 @@ function App() {
                   path="/posts/create_topic"
                   render={() => <PostCreateForm />}
                 />
+                <Route
+                  exact
+                  path="/posts/:id"
+                  render={() => <PostPageContent />}
+                />
                 <Route render={() => <h1>Page not found</h1>} />
               </Switch>
             </Container>
           </Col>
           <Col lg={4} sm={{ span: 4, order: "last" }} xs={{ order: "first" }}>
             <Container>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
-                recusandae hic totam obcaecati fugit adipisci perferendis nihil
-                veritatis quibusdam laborum?
-              </p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel
+              laboriosam voluptas in, qui facere expedita corporis incidunt
+              magnam consequatur sunt sapiente dicta reprehenderit quidem quo,
+              et, eos earum dolorem.
             </Container>
           </Col>
         </Row>
