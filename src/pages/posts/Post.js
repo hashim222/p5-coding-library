@@ -15,7 +15,6 @@ const Post = (props) => {
     profile_image,
     comments_count,
     bookmark_id,
-    bookmark_count,
     like_id,
     likes_count,
     title,

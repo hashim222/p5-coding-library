@@ -9,6 +9,7 @@ import SignInForm from "./pages/auth/SignInForm";
 import About from "./pages/About";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPageContent from "./pages/posts/PostPageContent";
+import PostsContentPage from "./pages/posts/PostsPageContent";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             <SideNavBar />
           </Col>
           <Col
-            lg={{ span: 6, offset: 2 }}
+            lg={{ span: 7, offset: 2 }}
             sm={{ span: 8, order: "first" }}
             xs={{ order: "last" }}
             className="gx-0 gx-sm-1 pt-3 pt-sm-5 pt-lg-0"
@@ -33,7 +34,23 @@ function App() {
                 <Route
                   exact
                   path={"/"}
-                  render={() => <h1>Home Page Home Page</h1>}
+                  render={() => (
+                    <PostsContentPage message="Results were not found. Please adjust your search keyword" />
+                  )}
+                />
+                <Route
+                  exact
+                  path={"/followings_feed"}
+                  render={() => (
+                    <PostsContentPage message="Results were not found. Please adjust your search keyword or follow the user" />
+                  )}
+                />
+                <Route
+                  exact
+                  path={"/bookmarked_topics"}
+                  render={() => (
+                    <PostsContentPage message="Results were not found. Please adjust your search keyword or bookmark the post you are interested in" />
+                  )}
                 />
                 <Route exact path={"/about"} render={() => <About />} />
                 <Route exact path={"/signin"} render={() => <SignInForm />} />
@@ -52,12 +69,17 @@ function App() {
               </Switch>
             </Container>
           </Col>
-          <Col lg={4} sm={{ span: 4, order: "last" }} xs={{ order: "first" }}>
+          <Col
+            lg={3}
+            sm={{ span: 4, order: "last" }}
+            xs={{ order: "first" }}
+            className="mt-5"
+          >
             <Container>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel
-              laboriosam voluptas in, qui facere expedita corporis incidunt
-              magnam consequatur sunt sapiente dicta reprehenderit quidem quo,
-              et, eos earum dolorem.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+              quisquam facilis itaque hic recusandae, alias quam atque excepturi
+              numquam et quibusdam dolore fuga enim a quasi tempore expedita!
+              Cupiditate, natus?
             </Container>
           </Col>
         </Row>
