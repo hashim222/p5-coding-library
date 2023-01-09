@@ -9,9 +9,13 @@ import SignInForm from "./pages/auth/SignInForm";
 import About from "./pages/About";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPageContent from "./pages/posts/PostPageContent";
-import PostsContentPage from "./pages/posts/PostsPageContent";
+import PostsPageContent from "./pages/posts/PostsPageContent";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
+
   return (
     <div className={styles.App}>
       <Container fluid>
@@ -35,21 +39,27 @@ function App() {
                   exact
                   path={"/"}
                   render={() => (
-                    <PostsContentPage message="Results were not found. Please adjust your search keyword" />
+                    <PostsPageContent message="Results were not found. Please adjust your search keyword" />
                   )}
                 />
                 <Route
                   exact
                   path={"/followings_feed"}
                   render={() => (
-                    <PostsContentPage message="Results were not found. Please adjust your search keyword or follow the user" />
+                    <PostsPageContent
+                      message="Results were not found. Please adjust your search keyword or follow the user"
+                      filter={`owner__followed__owner__profile=${profile_id}&`}
+                    />
                   )}
                 />
                 <Route
                   exact
                   path={"/bookmarked_topics"}
                   render={() => (
-                    <PostsContentPage message="Results were not found. Please adjust your search keyword or bookmark the post you are interested in" />
+                    <PostsPageContent
+                      message="Results were not found. Please adjust your search keyword or bookmark the post you are interested in"
+                      filter={`bookmark_posts__owner__profile=${profile_id}&ordering=-bookmark_posts__created_on&`}
+                    />
                   )}
                 />
                 <Route exact path={"/about"} render={() => <About />} />
