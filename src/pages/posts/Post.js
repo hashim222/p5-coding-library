@@ -3,9 +3,10 @@ import styles from "../../styles/PostContent.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { DropdownToggle } from "../../components/DropdownToggle";
 
 const Post = (props) => {
   const {
@@ -27,6 +28,21 @@ const Post = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const history = useHistory();
+
+  const handleEditPost = () => {
+    history.push(`/posts/${id}/edit`);
+  };
+
+  const handleDeletePost = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}/`);
+      history.goBack();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleLike = async () => {
     try {
@@ -116,8 +132,13 @@ const Post = (props) => {
           </Link>
         </div>
         <div className="mt-4">
-          <small className="">{updated_on}</small>
-          {is_owner && postPage && "[Owners edit post]"}
+          <small>{updated_on}</small>
+          {is_owner && postPage && (
+            <DropdownToggle
+              handleEditPost={handleEditPost}
+              handleDeletePost={handleDeletePost}
+            />
+          )}
         </div>
       </Card.Body>
       <Link to={`/posts/${id}`}>
