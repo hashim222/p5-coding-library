@@ -10,6 +10,8 @@ import Post from "./Post";
 import noResults from "../../assets/post-search-icon.png";
 import Asset from "../../components/Asset";
 import { Form, Col } from "react-bootstrap";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 const PostsPageContent = ({ message, filter = "" }) => {
   const [posts, setPosts] = useState({ results: [] });
@@ -24,8 +26,8 @@ const PostsPageContent = ({ message, filter = "" }) => {
         const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
+      } catch (error) {
+        console.log(error);
       }
     };
 
@@ -59,9 +61,17 @@ const PostsPageContent = ({ message, filter = "" }) => {
       {hasLoaded ? (
         <>
           {posts.results.length ? (
-            posts.results.map((post) => (
-              <Post key={post.id} {...post} setPosts={setPosts} />
-            ))
+            <InfiniteScroll
+              children={posts.results.map((post) => (
+                <Post key={post.id} {...post} setPosts={setPosts} />
+              ))}
+              dataLength={posts.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!posts.next}
+              next={() => {
+                fetchMoreData(posts, setPosts);
+              }}
+            />
           ) : (
             <Container className={styles.NoResultsAndSpinnerContainer}>
               <Asset src={noResults} message={message} />
