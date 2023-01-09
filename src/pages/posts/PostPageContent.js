@@ -28,7 +28,7 @@ const PostPageContent = () => {
   }, [id]);
 
   return (
-    <Row className="mt-5">
+    <Row>
       <Col>
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container>Post Comments</Container>

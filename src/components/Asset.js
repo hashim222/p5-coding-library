@@ -6,7 +6,7 @@ import styles from "../styles/Asset.module.css";
 const Asset = ({ spinner, src, message, icon }) => {
   return (
     <div className={`${styles.Asset} p-4`}>
-      {spinner && <Spinner animation="grow" />}
+      {spinner && <Spinner animation="grow" className={styles.Spinner} />}
       {src && <img src={src} alt={message} />}
       {icon && <i className={`${styles.UploadIcon} ${icon} p-3 p-md-4`}></i>}
       {message && (
