@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useParams } from "react-router-dom";
 import Post from "./Post";
+import commentStyles from "../../styles/CommentCreateEditForm.module.css";
 
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -38,7 +39,7 @@ const PostPageContent = () => {
     <Row>
       <Col>
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container>
+        <Container className={commentStyles.CommentContainer}>
           {currentUser ? (
             <CommentCreateForm
               profile_id={currentUser.profile_id}

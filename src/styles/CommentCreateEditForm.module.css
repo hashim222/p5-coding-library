@@ -1,0 +1,9 @@
+.CommentContainer {
+  background-color: #ffffff;
+}
+
+.FormTextarea {
+  border: none;
+  border-bottom: 2px #547799 solid;
+  background-color: #f1f5f8;
+}

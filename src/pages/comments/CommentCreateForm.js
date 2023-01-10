@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import styles from "../../styles/CommentCreateEditForm.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 import Avatar from "../../components/Avatar";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -41,13 +43,14 @@ function CommentCreateForm(props) {
   };
 
   return (
-    <Form className="mt-2" onSubmit={handleSubmit}>
+    <Form className="pt-3 mt-3" onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profileImage} />
           </Link>
           <Form.Control
+            className={styles.FormTextarea}
             placeholder="Add a comment"
             as="textarea"
             value={content}
@@ -57,10 +60,9 @@ function CommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={`btn d-block ml-auto`}
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} d-block ml-auto mt-2`}
         disabled={!content.trim()}
         type="submit"
-        style={{ backgroundColor: "aqua" }}
       >
         post
       </button>
