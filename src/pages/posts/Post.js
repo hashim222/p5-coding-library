@@ -131,7 +131,7 @@ const Post = (props) => {
             {owner}
           </Link>
         </div>
-        <div className="mt-4">
+        <div className="mt-3">
           <small>{updated_on}</small>
           {is_owner && postPage && (
             <DropdownToggle
