@@ -55,12 +55,12 @@ function CommentCreateForm(props) {
             as="textarea"
             value={content}
             onChange={handleChange}
-            rows={2}
+            rows={3}
           />
         </InputGroup>
       </Form.Group>
       <button
-        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} d-block ml-auto mt-2`}
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} d-block ml-auto mt-3 mb-3`}
         disabled={!content.trim()}
         type="submit"
       >

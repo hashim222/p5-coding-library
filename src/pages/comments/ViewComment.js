@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -6,6 +6,7 @@ import Avatar from "../../components/Avatar";
 import DropdownToggle from "../../components/DropdownToggle";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/ViewComment.module.css";
+import CommentEditForm from "./CommentEditForm";
 
 const ViewComment = (props) => {
   const {
@@ -18,6 +19,8 @@ const ViewComment = (props) => {
     setComments,
     setPost,
   } = props;
+
+  const [showEditForm, setShowEditForm] = useState(false);
 
   const handleDelete = async () => {
     try {
@@ -46,8 +49,11 @@ const ViewComment = (props) => {
   return (
     <div>
       <Card className={styles.CardContainer}>
-        {is_owner && (
-          <DropdownToggle handleEdit={() => {}} handleDelete={handleDelete} />
+        {is_owner && !showEditForm && (
+          <DropdownToggle
+            handleEdit={() => setShowEditForm(true)}
+            handleDelete={handleDelete}
+          />
         )}
         <Card.Body>
           <Link to={`/profiles/${profile_id}`}>
@@ -55,7 +61,18 @@ const ViewComment = (props) => {
 
             <span className={styles.Owner}>{owner}</span>
           </Link>
-          <span className={styles.CommentText}> - {comment}</span>
+          {showEditForm ? (
+            <CommentEditForm
+              id={id}
+              profile_id={profile_id}
+              comment={comment}
+              profileImage={profile_image}
+              setComments={setComments}
+              setShowEditForm={setShowEditForm}
+            />
+          ) : (
+            <span className={styles.CommentText}> - {comment}</span>
+          )}
           <span className={styles.Date}>{updated_on}</span>
         </Card.Body>
       </Card>
