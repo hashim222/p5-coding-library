@@ -54,7 +54,18 @@ Coding Library is a coding related community based social media website. Where u
 ## Bugs
 
 - ### Fixed Bugs
+
 - ### Unfixed Bugs
+
+  Although this might not be a bug, I still want to mention it. My goal was to give users the option of leaving the spaces they want in captions they are posting, but I couldn't achieve that because models do not have the option to turn off trimming for whitespaces and the serializer has this `trim_whitespace=False` which only supports charfields but i used TextField in modal and it was too late for that to change. I'll investigate this further in the future.
+
+  - ### I was trying to achieve:
+
+    ![I was trying to acive in this image](./src/assets/readme-images/trying-to-acheive.png)
+
+  - ### This is how it looks:
+
+    ![but got this](./src/assets/readme-images/got-this.png)
 
 ## Technologies Used
 
