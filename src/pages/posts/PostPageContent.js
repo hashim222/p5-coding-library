@@ -57,7 +57,12 @@ const PostPageContent = () => {
           ) : null}
           {comments.results.length ? (
             comments.results.map((comment) => (
-              <ViewComment key={comment.id} {...comment} />
+              <ViewComment
+                key={comment.id}
+                {...comment}
+                setPost={setPost}
+                setComments={setComments}
+              />
             ))
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>

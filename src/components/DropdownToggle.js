@@ -16,10 +16,10 @@ const EllipsisToggle = React.forwardRef(({ onClick }, ref) => (
 
 const DropdownToggle = ({ handleEdit, handleDelete }) => {
   return (
-    <Dropdown className="ml-auto mt-2" drop="left">
+    <Dropdown className="ml-4 mt-2" drop="left">
       <Dropdown.Toggle as={EllipsisToggle} />
 
-      <Dropdown.Menu className={`${styles.DropdownContainer} text-center`}>
+      <Dropdown.Menu className={`text-center`}>
         <Dropdown.Item
           className={`${styles.DropdownItem} ${btnStyles.Button}`}
           onClick={handleEdit}

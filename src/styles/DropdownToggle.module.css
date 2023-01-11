@@ -3,10 +3,6 @@
   cursor: pointer;
 }
 
-.DropdownContainer {
-  margin-left: -100px;
-}
-
 .DropdownItem {
   display: inline-block;
   max-width: 30%;
