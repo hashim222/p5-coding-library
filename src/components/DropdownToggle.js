@@ -14,7 +14,7 @@ const EllipsisToggle = React.forwardRef(({ onClick }, ref) => (
   />
 ));
 
-export const DropdownToggle = ({ handleEditPost, handleDeletePost }) => {
+const DropdownToggle = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto mt-2" drop="left">
       <Dropdown.Toggle as={EllipsisToggle} />
@@ -22,14 +22,14 @@ export const DropdownToggle = ({ handleEditPost, handleDeletePost }) => {
       <Dropdown.Menu className={`${styles.DropdownContainer} text-center`}>
         <Dropdown.Item
           className={`${styles.DropdownItem} ${btnStyles.Button}`}
-          onClick={handleEditPost}
+          onClick={handleEdit}
           aria-label="edit"
         >
           <i className="fas fa-edit" />
         </Dropdown.Item>
         <Dropdown.Item
           className={`${styles.DropdownItem} ${btnStyles.Button}`}
-          onClick={handleDeletePost}
+          onClick={handleDelete}
           aria-label="delete"
         >
           <i className="fas fa-trash-alt" />
@@ -38,3 +38,5 @@ export const DropdownToggle = ({ handleEditPost, handleDeletePost }) => {
     </Dropdown>
   );
 };
+
+export default DropdownToggle;

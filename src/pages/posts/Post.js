@@ -6,7 +6,7 @@ import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
-import { DropdownToggle } from "../../components/DropdownToggle";
+import DropdownToggle  from "../../components/DropdownToggle";
 
 const Post = (props) => {
   const {
@@ -31,11 +31,11 @@ const Post = (props) => {
 
   const history = useHistory();
 
-  const handleEditPost = () => {
+  const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };
 
-  const handleDeletePost = async () => {
+  const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
       history.goBack();
@@ -135,8 +135,8 @@ const Post = (props) => {
           <small>{updated_on}</small>
           {is_owner && postPage && (
             <DropdownToggle
-              handleEditPost={handleEditPost}
-              handleDeletePost={handleDeletePost}
+              handleEdit={handleEdit}
+              handleDelete={handleDelete}
             />
           )}
         </div>
