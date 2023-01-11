@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "react-bootstrap-v5";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/ViewComment.module.css";
@@ -8,17 +9,17 @@ const ViewComment = (props) => {
 
   return (
     <div>
-      <hr />
-      <div>
-        <Link to={`/profiles/${profile_id}`}>
-          <Avatar src={profile_image} />
-        </Link>
-        <div className="align-self-center ml-2">
-          <span className={styles.Owner}>{owner}</span>
+      <Card className={styles.CardContainer}>
+        <Card.Body>
+          <Link to={`/profiles/${profile_id}`}>
+            <Avatar src={profile_image} className="d-inline" height={60} />
+
+            <span className={styles.Owner}>{owner}</span>
+          </Link>
+          <span className={styles.CommentText}> - {comment}</span>
           <span className={styles.Date}>{updated_on}</span>
-          <p>{comment}</p>
-        </div>
-      </div>
+        </Card.Body>
+      </Card>
     </div>
   );
 };

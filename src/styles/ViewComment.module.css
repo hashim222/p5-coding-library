@@ -1,0 +1,21 @@
+.CardContainer {
+  margin-top: 15px;
+}
+
+.Owner {
+  font-weight: bold;
+  color: #49a6e9;
+}
+
+.Date {
+  font-weight: lighter;
+  color: #547699d1;
+  display: block;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.CommentText {
+  font-weight: lighter;
+  font-family: "Dosis", sans-serif;
+}
