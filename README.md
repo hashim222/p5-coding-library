@@ -30,7 +30,15 @@ Coding Library is a coding related community based social media website. Where u
     ![color scheme for the site](./src/assets/readme-images/color-scheme.png)
 
 - ### Font Used
+
   - To make the website stand out for UX, I used font Oswald and font Dosis:
+
+    - 'Oswald', sans-serif
+      ![color scheme for the site](./src/assets/readme-images/font-oswald.png)
+
+    - 'Dosis', sans-serif;
+      ![color scheme for the site](./src/assets/readme-images/font-dosis.png)
+
 - ### Wireframe
   - Site wireframe can be seen in the [wireframe.md](wireframe.md) file
 - ### User Stories
@@ -50,15 +58,37 @@ Coding Library is a coding related community based social media website. Where u
 
 ## Technologies Used
 
+The following technologies were used throughout the development of the project:
+
 - ### Language Used
+
   - [HTML](https://www.w3schools.com/html/)
   - [CSS](https://www.w3schools.com/css/)
   - [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
 - ### Libraries/Framework Used
+
   - [Bootstrap5](https://getbootstrap.com/)
   - [React-Bootstrap5](https://react-bootstrap.github.io/)
   - [React js](https://getbootstrap.com/)
+
 - ### Other Technologies
+
+  - [W3School](https://www.w3schools.com/)
+  - [Stackoverflow](https://stackoverflow.com/)
+  - [Git](https://git-scm.com/)
+  - [Github](https://github.com/)
+  - [Gitpod workspace](https://gitpod.io/workspaces)
+  - [Heroku](https://dashboard.heroku.com/apps)
+  - [Flowchart](https://lucid.app/documents#/documents?folder_id=home)
+  - [coolors](https://coolors.co/)
+  - [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
+  - [Font Awsome](https://fontawesome.com/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [Slack](https://slack.com/intl/en-gb/)
+  - [geeksforgeeks](https://www.geeksforgeeks.org/)
+  - [Diff checker](https://www.diffchecker.com/text-compare/)
+  - [Am i responsive](https://ui.dev/amiresponsive)
 
 ## Components
 

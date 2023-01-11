@@ -86,6 +86,7 @@ const PostCreateForm = () => {
         <Form.Label className={appStyles.DarkBluishcColor}>Caption</Form.Label>
         <Form.Control
           as="textarea"
+          wrap="hard"
           rows={6}
           name="caption"
           className={appStyles.Input}
