@@ -7,7 +7,7 @@ import styles from "../../styles/CommentCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import Avatar from "../../components/Avatar";
-import { axiosReq } from "../../api/axiosDefaults";
+import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
@@ -20,10 +20,11 @@ function CommentCreateForm(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const { data } = await axiosReq.post("/comments", {
+      const { data } = await axiosRes.post("/comments", {
         content,
         post,
       });
+      console.log(data);
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],
