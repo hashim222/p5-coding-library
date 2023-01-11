@@ -47,7 +47,7 @@
 .NavLinksForSmallerScreens:hover {
   transition: color ease-in-out 0.2s;
   color: #f1f5f8;
-  background-color: #547699c9;
+  background-color: #547799;
 }
 
 .ActiveSmall {

@@ -10,6 +10,7 @@ import commentStyles from "../../styles/CommentCreateEditForm.module.css";
 
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import ViewComment from "../comments/ViewComment";
 
 const PostPageContent = () => {
   const { id } = useParams();
@@ -56,9 +57,7 @@ const PostPageContent = () => {
           ) : null}
           {comments.results.length ? (
             comments.results.map((comment) => (
-              <p key={comment.id}>
-                {comment.owner}: {comment.comment}
-              </p>
+              <ViewComment key={comment.id} {...comment} />
             ))
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>

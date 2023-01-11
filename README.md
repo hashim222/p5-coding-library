@@ -24,7 +24,13 @@ Coding Library is a coding related community based social media website. Where u
     ![flowchart image](./src/assets/readme-images/flowchart.png)
 
 - ### Color scheme
+
+  - Using Google, I researched what colors are best for a coding-related website that is also user-friendly, and I decided to go with light blueish, dark blueish, white, and light white tones.
+
+    ![color scheme for the site](./src/assets/readme-images/color-scheme.png)
+
 - ### Font Used
+  - To make the website stand out for UX, I used font Oswald and font Dosis:
 - ### Wireframe
   - Site wireframe can be seen in the [wireframe.md](wireframe.md) file
 - ### User Stories
