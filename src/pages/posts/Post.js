@@ -210,11 +210,7 @@ const Post = (props) => {
             <hr className={styles.PostUnderline} />
           </Card.Title>
         )}
-        {caption && (
-          <Card.Text>
-            <pre className={styles.PostDescription}>{caption}</pre>
-          </Card.Text>
-        )}
+        {caption && <pre className={styles.PostDescription}>{caption}</pre>}
       </Card.Body>
     </Card>
   );

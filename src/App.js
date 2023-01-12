@@ -12,7 +12,7 @@ import PostPageContent from "./pages/posts/PostPageContent";
 import PostsPageContent from "./pages/posts/PostsPageContent";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
-import PopularProfiles from "./profiles/PopularProfiles";
+import PopularProfiles from "./pages/profiles/PopularProfiles";
 
 function App() {
   const currentUser = useCurrentUser();
