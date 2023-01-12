@@ -6,7 +6,7 @@ import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
-import DropdownToggle  from "../../components/DropdownToggle";
+import DropdownToggle from "../../components/DropdownToggle";
 
 const Post = (props) => {
   const {
@@ -204,8 +204,12 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
         </div>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {caption && <Card.Text>{caption}</Card.Text>}
+        {title && <Card.Title className={styles.PostTitle}>{title}</Card.Title>}
+        {caption && (
+          <Card.Text>
+            <pre className={styles.PostDescription}>{caption}</pre>
+          </Card.Text>
+        )}
       </Card.Body>
     </Card>
   );
