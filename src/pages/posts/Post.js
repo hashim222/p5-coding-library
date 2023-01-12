@@ -204,7 +204,12 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
         </div>
-        {title && <Card.Title className={styles.PostTitle}>{title}</Card.Title>}
+        {title && (
+          <Card.Title className={styles.PostTitle}>
+            {title}
+            <hr className={styles.PostUnderline} />
+          </Card.Title>
+        )}
         {caption && (
           <Card.Text>
             <pre className={styles.PostDescription}>{caption}</pre>

@@ -23,30 +23,25 @@
 }
 
 .PostTitle {
-  color: #ffffff;
-  background-color: #49a6e9;
+  color: #49a6e9;
   font-size: 130%;
   padding: 5px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 5px;
-  width: 100%;
+  width: 50%;
 }
 
-@media (min-width: 992px) {
-  .PostTitle {
-    font-size: 140%;
-    width: 50%;
-  }
+.PostUnderline {
+  border-top: 2px solid #547799;
 }
 
 .PostDescription {
   color: #547799;
   font-family: "Dosis", sans-serif;
   margin-top: 20px;
-  background-color: #f1f5f8;
+  background-color: #f1f5f8ab;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 *::-webkit-scrollbar {

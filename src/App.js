@@ -12,6 +12,7 @@ import PostPageContent from "./pages/posts/PostPageContent";
 import PostsPageContent from "./pages/posts/PostsPageContent";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
+import PopularProfiles from "./profiles/PopularProfiles";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -91,12 +92,7 @@ function App() {
             xs={{ order: "first" }}
             className="mt-5"
           >
-            <Container>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
-              quisquam facilis itaque hic recusandae, alias quam atque excepturi
-              numquam et quibusdam dolore fuga enim a quasi tempore expedita!
-              Cupiditate, natus?
-            </Container>
+            <PopularProfiles />
           </Col>
         </Row>
       </Container>
