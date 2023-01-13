@@ -92,7 +92,8 @@ function App() {
             xs={{ order: "first" }}
             className="mt-5"
           >
-            <PopularProfiles />
+            <PopularProfiles mobile />
+            <PopularProfiles desktop />
           </Col>
         </Row>
       </Container>
