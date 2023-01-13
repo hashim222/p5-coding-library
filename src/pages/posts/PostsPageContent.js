@@ -74,7 +74,7 @@ const PostsPageContent = ({ message, filter = "" }) => {
             />
           ) : (
             <Container className={styles.NoResultsAndSpinnerContainer}>
-              <Asset src={noResults} message={message} />
+              <Asset src={noResults} className="img-fluid" message={message} />
             </Container>
           )}
         </>
