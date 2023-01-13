@@ -109,3 +109,4 @@ The following technologies were used throughout the development of the project:
 
 - ### Content
 - ### Media
+  - `404 graphic` was taken from [Vecteezy](https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document) website.
