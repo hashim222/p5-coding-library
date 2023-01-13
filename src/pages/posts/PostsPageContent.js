@@ -7,7 +7,7 @@ import styles from "../../styles/PostsPageContent.module.css";
 import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
-import noResults from "../../assets/post-search-icon.png";
+import noResults from "../../assets/results-not-found.png";
 import Asset from "../../components/Asset";
 import { Form, Col } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";

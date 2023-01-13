@@ -42,7 +42,7 @@ function App() {
                   exact
                   path={"/"}
                   render={() => (
-                    <PostsPageContent message="Results were not found. Please adjust your search keyword" />
+                    <PostsPageContent message="Results were not found. Please adjust your search keyword." />
                   )}
                 />
                 <Route
@@ -50,7 +50,7 @@ function App() {
                   path={"/followings_feed"}
                   render={() => (
                     <PostsPageContent
-                      message="Results were not found. Please adjust your search keyword or follow the user"
+                      message="Results were not found. Please adjust your search keyword or follow the user."
                       filter={`owner__followed__owner__profile=${profile_id}&`}
                     />
                   )}
@@ -60,7 +60,7 @@ function App() {
                   path={"/bookmarked_topics"}
                   render={() => (
                     <PostsPageContent
-                      message="Results were not found. Please adjust your search keyword or bookmark the post you are interested in"
+                      message="Results were not found. Please adjust your search keyword or bookmark the post you are interested in."
                       filter={`bookmark_posts__owner__profile=${profile_id}&ordering=-bookmark_posts__created_on&`}
                     />
                   )}
