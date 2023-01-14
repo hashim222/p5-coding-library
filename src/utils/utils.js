@@ -31,3 +31,15 @@ export const followData = (profile, clickedOnProfile, following_id) => {
       }
     : profile;
 };
+
+export const unfollowData = (profile, clickedOnProfile) => {
+  return profile.id === clickedOnProfile.id
+    ? {
+        ...profile,
+        followers_count: profile.followers_count - 1,
+        following_id: null,
+      }
+    : profile.is_owner
+    ? { ...profile, following_count: profile.following_count - 1 }
+    : profile;
+};
