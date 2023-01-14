@@ -47,24 +47,25 @@ export const ProfileEditDropdown = ({ id }) => {
       <Dropdown.Toggle as={EllipsisToggle} />
       <Dropdown.Menu>
         <Dropdown.Item
+          className={styles.EditProfileButtons}
           onClick={() => history.push(`/profiles/${id}/edit`)}
           aria-label="edit-profile"
         >
-          <i className="fas fa-edit" /> edit profile
+          <i className="fas fa-edit" /> Edit profile
         </Dropdown.Item>
         <Dropdown.Item
+          className={styles.EditProfileButtons}
           onClick={() => history.push(`/profiles/${id}/edit/username`)}
           aria-label="edit-username"
         >
-          <i className="far fa-id-card" />
-          change username
+          <i className="far fa-id-card" /> Change username
         </Dropdown.Item>
         <Dropdown.Item
+          className={styles.EditProfileButtons}
           onClick={() => history.push(`/profiles/${id}/edit/password`)}
           aria-label="edit-password"
         >
-          <i className="fas fa-key" />
-          change password
+          <i class="fa-solid fa-unlock" /> Change password
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
