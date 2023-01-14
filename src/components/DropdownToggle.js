@@ -2,6 +2,7 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import styles from "../styles/DropdownToggle.module.css";
 import btnStyles from "../styles/Button.module.css";
+import { useHistory } from "react-router-dom";
 
 const EllipsisToggle = React.forwardRef(({ onClick }, ref) => (
   <i
@@ -14,7 +15,7 @@ const EllipsisToggle = React.forwardRef(({ onClick }, ref) => (
   />
 ));
 
-const DropdownToggle = ({ handleEdit, handleDelete }) => {
+export const EllipsisDropdown = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-4 mt-2" drop="left">
       <Dropdown.Toggle as={EllipsisToggle} />
@@ -39,4 +40,33 @@ const DropdownToggle = ({ handleEdit, handleDelete }) => {
   );
 };
 
-export default DropdownToggle;
+export const ProfileEditDropdown = ({ id }) => {
+  const history = useHistory();
+  return (
+    <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
+      <Dropdown.Toggle as={EllipsisToggle} />
+      <Dropdown.Menu>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit`)}
+          aria-label="edit-profile"
+        >
+          <i className="fas fa-edit" /> edit profile
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit/username`)}
+          aria-label="edit-username"
+        >
+          <i className="far fa-id-card" />
+          change username
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit/password`)}
+          aria-label="edit-password"
+        >
+          <i className="fas fa-key" />
+          change password
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+};

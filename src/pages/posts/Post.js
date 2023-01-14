@@ -6,7 +6,7 @@ import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
-import DropdownToggle from "../../components/DropdownToggle";
+import { EllipsisDropdown } from "../../components/DropdownToggle";
 
 const Post = (props) => {
   const {
@@ -134,7 +134,7 @@ const Post = (props) => {
         <div className="mt-3">
           <small>{updated_on}</small>
           {is_owner && postPage && (
-            <DropdownToggle
+            <EllipsisDropdown
               handleEdit={handleEdit}
               handleDelete={handleDelete}
             />

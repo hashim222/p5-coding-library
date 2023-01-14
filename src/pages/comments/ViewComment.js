@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
-import DropdownToggle from "../../components/DropdownToggle";
+import { EllipsisDropdown } from "../../components/DropdownToggle";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import styles from "../../styles/ViewComment.module.css";
 import CommentEditForm from "./CommentEditForm";
@@ -50,7 +50,7 @@ const ViewComment = (props) => {
     <div>
       <Card className={styles.CardContainer}>
         {is_owner && !showEditForm && (
-          <DropdownToggle
+          <EllipsisDropdown
             handleEdit={() => setShowEditForm(true)}
             handleDelete={handleDelete}
           />

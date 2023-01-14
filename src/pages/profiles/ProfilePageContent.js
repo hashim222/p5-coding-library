@@ -22,6 +22,7 @@ import { Button, Image } from "react-bootstrap";
 import Post from "../posts/Post";
 import noResults from "../../assets/results-not-found.png";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { ProfileEditDropdown } from "../../components/DropdownToggle";
 
 const ProfilePageContent = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -58,6 +59,7 @@ const ProfilePageContent = () => {
 
   const mainProfile = (
     <>
+      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row className="px-3 text-center">
         <Col lg={3}>
           <Image
