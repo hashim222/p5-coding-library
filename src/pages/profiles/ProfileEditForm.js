@@ -111,8 +111,9 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
-        <Form.Label>Name</Form.Label>
+        <Form.Label className={appStyles.DarkBluishcColor}>Name</Form.Label>
         <Form.Control
+          className={appStyles.Input}
           type="text"
           value={name}
           onChange={handleChange}
@@ -127,13 +128,15 @@ const ProfileEditForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Years of experience</Form.Label>
+        <Form.Label className={appStyles.DarkBluishcColor}>
+          Years of experience
+        </Form.Label>
         <Form.Control
           as="select"
+          className={`${appStyles.Input} form-select`}
           name="years_of_experience"
           onChange={handleChange}
           value={years_of_experience}
-          className="form-select"
           aria-label="years_of_experience"
         >
           <option className="fw-bold" value="">
@@ -154,13 +157,15 @@ const ProfileEditForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Your favorite programming language</Form.Label>
+        <Form.Label className={appStyles.DarkBluishcColor}>
+          Your favorite programming language
+        </Form.Label>
         <Form.Control
           as="select"
           name="favourite_programming_language"
           onChange={handleChange}
           value={favourite_programming_language}
-          className="form-select"
+          className={`${appStyles.Input} form-select`}
           aria-label="favourite_programming_language"
         >
           <option className="fw-bold" value="">
@@ -183,13 +188,14 @@ const ProfileEditForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>About me</Form.Label>
+        <Form.Label className={appStyles.DarkBluishcColor}>About me</Form.Label>
         <Form.Control
           as="textarea"
           value={about_me}
           onChange={handleChange}
           name="about_me"
           rows={3}
+          className={appStyles.Input}
         />
       </Form.Group>
 
@@ -200,12 +206,15 @@ const ProfileEditForm = () => {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover}`}
         onClick={() => history.goBack()}
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover}`}
+        type="submit"
+      >
         save
       </Button>
     </>
@@ -213,9 +222,9 @@ const ProfileEditForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
+      <Row className={appStyles.Container}>
         <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
-          <Container className={appStyles.Content}>
+          <Container>
             <Form.Group>
               {image && (
                 <figure>
@@ -229,7 +238,7 @@ const ProfileEditForm = () => {
               ))}
               <div>
                 <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Blue} btn my-auto`}
+                  className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} my-auto`}
                   htmlFor="image-upload"
                 >
                   Change the image
@@ -254,7 +263,7 @@ const ProfileEditForm = () => {
           </Container>
         </Col>
         <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-          <Container className={appStyles.Content}>{textFields}</Container>
+          <Container>{textFields}</Container>
         </Col>
       </Row>
     </Form>

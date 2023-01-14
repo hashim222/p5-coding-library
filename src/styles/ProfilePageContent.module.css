@@ -26,3 +26,15 @@
 .FollowBtns:hover {
   background-color: #547799;
 }
+
+.UserProfileDetail {
+  color: #49a6e9;
+  font-size: 100%;
+  margin-top: 10px;
+}
+
+.UserProfileDetail span {
+  display: block;
+  color: #547799;
+  font-size: 130%;
+}

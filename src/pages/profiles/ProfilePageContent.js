@@ -109,20 +109,34 @@ const ProfilePageContent = () => {
 
         {profile && (
           <Col className="p-3">
-            <p>Name:{profile.name ? profile?.name : "n/a"}</p>
-            <p>
-              Coding experience:
-              {profile.years_of_experience === ""
-                ? "n/a"
-                : profile?.years_of_experience}
-            </p>
-            <p>
-              Favourite programming language:
-              {profile.favourite_programming_language === ""
-                ? "n/a"
-                : profile?.favourite_programming_language}
-            </p>
-            <p>About me:{profile.about_me ? profile?.about_me : "n/a"}</p>
+            <div className={styles.UserProfileDetail}>
+              <span>Name:</span>
+              {profile.name ? profile?.name : <i className="fa-solid fa-ban" />}
+            </div>
+            <div className={styles.UserProfileDetail}>
+              <span>Coding experience:</span>
+              {profile.years_of_experience === "" ? (
+                <i className="fa-solid fa-ban" />
+              ) : (
+                profile?.years_of_experience
+              )}
+            </div>
+            <div className={styles.UserProfileDetail}>
+              <span>Favourite programming language:</span>
+              {profile.favourite_programming_language === "" ? (
+                <i className="fa-solid fa-ban" />
+              ) : (
+                profile?.favourite_programming_language
+              )}
+            </div>
+            <div className={styles.UserProfileDetail}>
+              <span>About me:</span>
+              {profile.about_me ? (
+                profile?.about_me
+              ) : (
+                <i className="fa-solid fa-ban" />
+              )}
+            </div>
           </Col>
         )}
       </Row>
