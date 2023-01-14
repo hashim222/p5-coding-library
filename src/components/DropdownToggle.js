@@ -65,7 +65,7 @@ export const ProfileEditDropdown = ({ id }) => {
           onClick={() => history.push(`/profiles/${id}/edit/password`)}
           aria-label="edit-password"
         >
-          <i class="fa-solid fa-unlock" /> Change password
+          <i className="fa-solid fa-unlock" /> Change password
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

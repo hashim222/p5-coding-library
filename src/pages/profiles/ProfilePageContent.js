@@ -107,12 +107,22 @@ const ProfilePageContent = () => {
             ))}
         </Col>
 
-        {profile?.content && (
+        {profile && (
           <Col className="p-3">
-            <p>Name:</p>
-            <p>Years of experience:</p>
-            <p>Favourite programming language:</p>
-            <p>About me:</p>
+            <p>Name:{profile.name ? profile?.name : "n/a"}</p>
+            <p>
+              Coding experience:
+              {profile.years_of_experience === ""
+                ? "n/a"
+                : profile?.years_of_experience}
+            </p>
+            <p>
+              Favourite programming language:
+              {profile.favourite_programming_language === ""
+                ? "n/a"
+                : profile?.favourite_programming_language}
+            </p>
+            <p>About me:{profile.about_me ? profile?.about_me : "n/a"}</p>
           </Col>
         )}
       </Row>
