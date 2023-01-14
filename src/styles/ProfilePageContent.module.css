@@ -18,3 +18,11 @@
     height: 250px;
   }
 }
+
+.FollowBtns {
+  background-color: #49a6e9;
+}
+
+.FollowBtns:hover {
+  background-color: #547799;
+}

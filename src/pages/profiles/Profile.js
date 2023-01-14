@@ -3,12 +3,15 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/ProfilePageContent.module.css";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useSetProfileData } from "../../contexts/ProfileDataContext";
 
 const Profile = (props) => {
   const { profile, desktop, mobile, imageSize = 55 } = props;
   const { id, following_id, image, owner } = profile;
+  const { handleFollow } = useSetProfileData();
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -32,13 +35,18 @@ const Profile = (props) => {
           currentUser &&
           !is_owner &&
           (following_id ? (
-            <Button onClick={() => {}}>unfollow</Button>
+            <Button
+              onClick={() => {}}
+              className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover}`}
+            >
+              Unfollow
+            </Button>
           ) : (
             <Button
-              className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover}`}
-              onClick={() => {}}
+              className={`${btnStyles.Button} ${styles.FollowBtns}`}
+              onClick={() => handleFollow(profile)}
             >
-              follow
+              Follow
             </Button>
           ))}
       </div>

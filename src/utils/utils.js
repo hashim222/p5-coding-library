@@ -16,3 +16,18 @@ export const fetchMoreData = async (resource, setResource) => {
     console.log(error);
   }
 };
+
+export const followData = (profile, clickedOnProfile, following_id) => {
+  return profile.id === clickedOnProfile.id
+    ? {
+        ...profile,
+        followers_count: profile.followers_count + 1,
+        following_id,
+      }
+    : profile.is_owner
+    ? {
+        ...profile,
+        following_count: profile.following_count + 1,
+      }
+    : profile;
+};
