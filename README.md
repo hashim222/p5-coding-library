@@ -14,7 +14,6 @@ Coding Library is a coding related community based social media website. Where u
 
 ## UX
 
-- ### Agile Methodology
 - ### Flowchart
 
   - Flowchart was created before I created the project, which gave me an idea of which user has access to which page and what each link should be doing.
@@ -33,21 +32,32 @@ Coding Library is a coding related community based social media website. Where u
 
   - To make the website stand out for UX, I used font Oswald and font Dosis:
 
-    - 'Oswald', sans-serif
+    - 'Oswald', sans-serif  
       ![color scheme for the site](./src/assets/readme-images/font-oswald.png)
 
-    - 'Dosis', sans-serif;
+    - 'Dosis', sans-serif  
       ![color scheme for the site](./src/assets/readme-images/font-dosis.png)
 
 - ### Wireframe
-  - Site wireframe can be seen in the [wireframe.md](wireframe.md) file
+
+  - Site wireframe can be seen in the [wireframe.md](wireframe.md) file.
+
+- ### Agile Methodology
+
+  - Project github issues can be accessed [here](https://github.com/hashim222/p5-coding-library/issues).
+
+  - To make my kanban board public, I changed visibility from private to public in project settings and It can be accessed here [here](https://github.com/users/hashim222/projects/11).
+
 - ### User Stories
-- ### Admin Stories
+  You can view all the user stories and admin stories [here](user-story.md)
 
 ## Features
 
 - ### Existing Features
+
 - ### Future Features
+  - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
+  - In the future, I would like to add an option for struggling users to post their code so other members of the community can help them.
 
 ## Testings
 
@@ -56,16 +66,6 @@ Coding Library is a coding related community based social media website. Where u
 - ### Fixed Bugs
 
 - ### Unfixed Bugs
-
-  Although this might not be a bug, I still want to mention it. My goal was to give users the option of leaving the spaces they want in captions they are posting, but I couldn't achieve that because models do not have the option to turn off trimming for whitespaces and the serializer has this `trim_whitespace=False` which only supports charfields but i used TextField in modal and it was too late for that to change. I'll investigate this further in the future.
-
-  - ### I was trying to achieve:
-
-    ![I was trying to acive in this image](./src/assets/readme-images/trying-to-acheive.png)
-
-  - ### This is how it looks:
-
-    ![but got this](./src/assets/readme-images/got-this.png)
 
 ## Technologies Used
 
