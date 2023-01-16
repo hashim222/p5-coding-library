@@ -64,7 +64,7 @@ const ProfilePageContent = () => {
         <Col lg={3}>
           <Image
             src={profile?.image}
-            className={styles.ProfileImage}
+            className={`${styles.ProfileImage} img-fluid`}
             roundedCircle
           />
         </Col>
@@ -93,7 +93,7 @@ const ProfilePageContent = () => {
             (profile?.following_id ? (
               <Button
                 onClick={() => handleUnfollow(profile)}
-                className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover}`}
+                className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} mt-3`}
               >
                 Unfollow
               </Button>

@@ -57,7 +57,7 @@ Coding Library is a coding related community based social media website. Where u
 
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
-  - In the future, I would like to add an option for struggling users to post their code so other members of the community can help them.
+  - In the future, I would like to add an option for struggling users to post their code so members of the community can help them with their issues.
 
 ## Testings
 
@@ -66,6 +66,12 @@ Coding Library is a coding related community based social media website. Where u
 - ### Fixed Bugs
 
 - ### Unfixed Bugs
+
+  - One of the issues I encountered was that when user/owner clicked on the three-dot icon to edit their profile or post, the dropdown menu would open at the top of the Popular profile page, which I did not want. To fix it, I tried adding margin, but that caused a console error, so I stayed with the previous issue and documented it in the readme.
+
+    ![color scheme for the site](./src/assets/readme-images/three-dot-icon-bug-profile.png)
+
+    ![color scheme for the site](./src/assets/readme-images/three-dot-icon-bug-posts.png)
 
 ## Technologies Used
 
@@ -102,6 +108,9 @@ The following technologies were used throughout the development of the project:
   - [Am i responsive](https://ui.dev/amiresponsive)
 
 ## Components
+
+- ### The following components have been implemented in this project and reused throughout:
+  - **Asset:** Using this component, spinners are loaded throughout the site and user messages are displayed if search results are not found.
 
 ## Deployments
 

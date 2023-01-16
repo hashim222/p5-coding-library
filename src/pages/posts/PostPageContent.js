@@ -43,7 +43,7 @@ const PostPageContent = () => {
   // console.log(comments);
 
   return (
-    <Row>
+    <Row className="mt-2 mt-md-5">
       <Col>
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={`${commentStyles.CommentContainer} pb-3`}>
