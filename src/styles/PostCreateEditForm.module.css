@@ -2,24 +2,6 @@
   min-height: 400px;
   background-color: #ffffff;
   width: 100%;
-}
-
-/* 
-  Post create and edit form.
-  Devices with a width larger than 576 pixels 
-*/
-@media (min-width: 576px) {
-  .Container {
-    width: 90%;
-  }
-}
-
-/* 
-  Post create and edit form.
-  Devices with a width larger than 768 pixels 
-*/
-@media (min-width: 768px) {
-  .Container {
-    width: 100%;
-  }
+  border: 1px solid #dadadf;
+  border-radius: 8px;
 }

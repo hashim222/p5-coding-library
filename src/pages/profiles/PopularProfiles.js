@@ -9,9 +9,9 @@ const PopularProfiles = ({ mobile, desktop }) => {
   const { popularProfiles } = useProfileData();
 
   return (
-    <Container
-      className={`${styles.Container} ${mobile && "d-md-none text-center"} ${
-        desktop && "d-none d-md-block"
+    <Container fluid
+      className={`${styles.Container} ${mobile && "d-md-none text-center mt-2"} ${
+        desktop && "d-none d-md-block mt-md-5 mt-lg-2"
       }`}
     >
       {popularProfiles.results.length ? (

@@ -1,11 +1,12 @@
 import React from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import styles from "./../styles/About.module.css";
+import appStyles from "../App.module.css";
 
 const About = () => {
   return (
-    <Row className={styles.Row}>
-      <Col className={`${styles.Col} my-auto py-2 p-md-2`} md={12}>
+    <Row className={`${appStyles.Container} mt-2 mt-md-5`}>
+      <Col className={`my-auto py-2 p-md-2`} md={12}>
         <Container className="p-4 text-center">
           <h1 className={styles.Header}>About Page</h1>
           <hr className={styles.AboutBorderBottom} />

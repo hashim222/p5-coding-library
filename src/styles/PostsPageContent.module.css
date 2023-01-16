@@ -1,5 +1,9 @@
 .NoResultsAndSpinnerContainer {
   background-color: #ffffff;
+  margin: 10px;
+  border: 1px solid #dadadf;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .SearchBar input {

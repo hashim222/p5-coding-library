@@ -28,7 +28,7 @@ const Profile = (props) => {
         </Link>
       </div>
       <div>
-        <strong>{owner}</strong>
+        <strong className="ml-2">{owner}</strong>
       </div>
       <div className={`text-right ${!mobile && "ml-auto"}`}>
         {!mobile &&

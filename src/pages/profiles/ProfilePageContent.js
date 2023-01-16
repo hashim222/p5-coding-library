@@ -168,7 +168,7 @@ const ProfilePageContent = () => {
   );
 
   return (
-    <Row className={styles.Container}>
+    <Row className={`${appStyles.Container} mt-2 mt-md-5`}>
       <Col className="py-2 p-0 p-lg-2">
         <Container className={appStyles.Content}>
           {hasLoaded ? (

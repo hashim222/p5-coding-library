@@ -114,7 +114,7 @@ function App() {
             lg={3}
             md={{ span: 4, order: "last" }}
             xs={{ order: "first" }}
-            className="mt-5 pl-0 pr-0 pl-md-3 pr-md-3"
+            className="mt-5 pl-0 pr-0 pr-md-3"
           >
             <PopularProfiles mobile />
             <PopularProfiles desktop />

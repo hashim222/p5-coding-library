@@ -13,9 +13,10 @@
 
 .Container {
   background-color: #ffffff;
-  padding: 10px;
-  border-radius: 2px;
+  margin: 2px;
   border: 1px solid #dadadf;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .NavBarBgColor {

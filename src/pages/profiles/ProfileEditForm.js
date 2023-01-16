@@ -221,7 +221,9 @@ const ProfileEditForm = () => {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}
+    className="mt-2 mt-md-5"
+    >
       <Row className={appStyles.Container}>
         <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
           <Container>

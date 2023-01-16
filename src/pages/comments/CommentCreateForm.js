@@ -50,7 +50,7 @@ function CommentCreateForm(props) {
             <Avatar src={profileImage} />
           </Link>
           <Form.Control
-            className={styles.FormTextarea}
+            className={`${styles.FormTextarea} ml-1`}
             placeholder="Add a comment"
             as="textarea"
             value={content}

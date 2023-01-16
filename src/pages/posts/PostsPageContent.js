@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-
 import styles from "../../styles/PostsPageContent.module.css";
 import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import noResults from "../../assets/results-not-found.png";
 import Asset from "../../components/Asset";
-import { Form, Col } from "react-bootstrap";
+import { Form, Col, Card } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 
@@ -42,7 +40,9 @@ const PostsPageContent = ({ message, filter = "" }) => {
   }, [filter, pathname, query]);
 
   return (
-    <Row>
+    <Row
+      className="p-0 p-md-2 mt-0 mt-md-3"
+    >
       <Col>
         <i className={`fas fa-search ${styles.SearchBarIcon}`} />
         <Form
@@ -73,15 +73,23 @@ const PostsPageContent = ({ message, filter = "" }) => {
               }}
             />
           ) : (
-            <Container className={styles.NoResultsAndSpinnerContainer}>
-              <Asset src={noResults} className="img-fluid" message={message} />
-            </Container>
+            <Row>
+              <Card className={`${styles.NoResultsAndSpinnerContainer}`}>
+                <Asset
+                  src={noResults}
+                  className="img-fluid"
+                  message={message}
+                />
+              </Card>
+            </Row>
           )}
         </>
       ) : (
-        <Container className={styles.NoResultsAndSpinnerContainer}>
-          <Asset spinner />
-        </Container>
+        <Row>
+          <Card className={`${styles.NoResultsAndSpinnerContainer}`}>
+            <Asset spinner />
+          </Card>
+        </Row>
       )}
     </Row>
   );

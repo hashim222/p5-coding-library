@@ -47,36 +47,34 @@ const ViewComment = (props) => {
   const is_owner = currentUser?.username === owner;
 
   return (
-    <div>
-      <Card className={styles.CardContainer}>
-        {is_owner && !showEditForm && (
-          <EllipsisDropdown
-            handleEdit={() => setShowEditForm(true)}
-            handleDelete={handleDelete}
-          />
-        )}
-        <Card.Body>
-          <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profile_image} className="d-inline" height={60} />
+    <Card className={styles.CardContainer}>
+      {is_owner && !showEditForm && (
+        <EllipsisDropdown
+          handleEdit={() => setShowEditForm(true)}
+          handleDelete={handleDelete}
+        />
+      )}
+      <Card.Body>
+        <Link to={`/profiles/${profile_id}`}>
+          <Avatar src={profile_image} className="d-inline" height={60} />
 
-            <span className={styles.Owner}>{owner}</span>
-          </Link>
-          {showEditForm ? (
-            <CommentEditForm
-              id={id}
-              profile_id={profile_id}
-              comment={comment}
-              profileImage={profile_image}
-              setComments={setComments}
-              setShowEditForm={setShowEditForm}
-            />
-          ) : (
-            <span className={styles.CommentText}> - {comment}</span>
-          )}
-          <span className={styles.Date}>{updated_on}</span>
-        </Card.Body>
-      </Card>
-    </div>
+          <span className={styles.Owner}>{owner}</span>
+        </Link>
+        {showEditForm ? (
+          <CommentEditForm
+            id={id}
+            profile_id={profile_id}
+            comment={comment}
+            profileImage={profile_image}
+            setComments={setComments}
+            setShowEditForm={setShowEditForm}
+          />
+        ) : (
+          <span className={styles.CommentText}> - {comment}</span>
+        )}
+        <span className={styles.Date}>{updated_on}</span>
+      </Card.Body>
+    </Card>
   );
 };
 

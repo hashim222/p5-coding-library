@@ -82,7 +82,7 @@ const PostEditForm = () => {
   };
 
   const textFields = (
-    <div className="text-center pt-0 pt-md-4">
+    <div className="text-center pt-0 pt-lg-4">
       <Form.Group>
         <Form.Label className={appStyles.DarkBluishcColor}>
           Title of topic
@@ -119,7 +119,7 @@ const PostEditForm = () => {
       ))}
 
       <Button
-        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} mt-3 mt-md-4 mb-0 mb-md-2`}
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} mt-3 mb-0`}
         onClick={() => {
           history.goBack();
         }}
@@ -127,7 +127,7 @@ const PostEditForm = () => {
         cancel
       </Button>
       <Button
-        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} mt-3 mt-md-4 mb-0 mb-md-2`}
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} mt-3 mb-0`}
         type="submit"
       >
         Make a changes
@@ -136,11 +136,11 @@ const PostEditForm = () => {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className="mt-2 mt-md-5">
       <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+        <Col className="py-2 p-0 p-md-2">
           <Container
-            className={`${styles.Container} d-flex flex-column justify-content-center pb-3 pb-lg-0`}
+            className={`${styles.Container} d-flex flex-column justify-content-center pb-3 pt-2`}
           >
             <Form.Group className="text-center">
               <figure>
@@ -168,15 +168,8 @@ const PostEditForm = () => {
               </Alert>
             ))}
 
-            <div className="d-md-none">{textFields}</div>
+            <div>{textFields}</div>
           </Container>
-        </Col>
-        <Col
-          md={5}
-          lg={4}
-          className="d-none d-md-block p-0 pt-md-2 pb-md-2 pl-md-0 mr-md-0"
-        >
-          <Container className={styles.Container}>{textFields}</Container>
         </Col>
       </Row>
     </Form>
