@@ -8,9 +8,13 @@ import appStyles from "../../App.module.css";
 import { Col, Row, Container, Form, Button, Alert } from "react-bootstrap";
 import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { UseRedirect } from "../../hooks/UseRedirect";
 
 const SignInForm = () => {
   const setCurrentUser = useSetCurrentUser();
+
+  UseRedirect("loggedIn");
+
   const [signInData, setSignInData] = useState({
     username: "",
     password: "",
@@ -26,7 +30,7 @@ const SignInForm = () => {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
-      history.push("/");
+      history.goBack();
     } catch (err) {
       setErrors(err.response?.data);
     }
@@ -81,7 +85,7 @@ const SignInForm = () => {
             ))}
 
             <Button
-              className={`${btnStyles.Button} ${btnStyles.FormBtns}`}
+              className={`${btnStyles.Button} ${btnStyles.FormBtns} ${btnStyles.BtnHover}`}
               type="submit"
             >
               Sign in
