@@ -56,9 +56,9 @@ const ViewComment = (props) => {
       )}
       <Card.Body>
         <Link to={`/profiles/${profile_id}`}>
-          <Avatar src={profile_image} className="d-inline" height={60} />
+          <Avatar src={profile_image} className="d-inline rounded-circle" height={60} />
 
-          <span className={styles.Owner}>{owner}</span>
+          <span className={`${styles.Owner} ml-2`}>{owner}</span>
         </Link>
         {showEditForm ? (
           <CommentEditForm

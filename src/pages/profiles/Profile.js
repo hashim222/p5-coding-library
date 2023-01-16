@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import btnStyles from "../../styles/Button.module.css";
 import styles from "../../styles/ProfilePageContent.module.css";
+import appStyles from "../../App.module.css";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useSetProfileData } from "../../contexts/ProfileDataContext";
@@ -28,7 +29,7 @@ const Profile = (props) => {
         </Link>
       </div>
       <div>
-        <strong className="ml-2">{owner}</strong>
+        <span className={`${appStyles.LightBluishcColor} ml-0 ml-md-2`}>{owner}</span>
       </div>
       <div className={`text-right ${!mobile && "ml-auto"}`}>
         {!mobile &&

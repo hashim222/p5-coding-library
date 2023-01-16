@@ -4,19 +4,23 @@ import { useProfileData } from "../../contexts/ProfileDataContext";
 import styles from "../../styles/PopularProfiles.module.css";
 import Profile from "./Profile";
 import Asset from "../../components/Asset";
+import appStyles from "../../App.module.css";
 
 const PopularProfiles = ({ mobile, desktop }) => {
   const { popularProfiles } = useProfileData();
 
   return (
-    <Container fluid
-      className={`${styles.Container} ${mobile && "d-md-none text-center mt-2"} ${
-        desktop && "d-none d-md-block mt-md-5 mt-lg-2"
-      }`}
+    <Container
+      fluid
+      className={`${styles.Container} ${
+        mobile && "d-md-none text-center mt-2"
+      } ${desktop && "d-none d-md-block mt-md-5 mt-lg-2"}`}
     >
       {popularProfiles.results.length ? (
         <>
-          <p className="text-center">Popular profiles:</p>
+          <p className={`${appStyles.DarkBluishcColor} fw-bold text-center`}>
+            Popular profiles:
+          </p>
 
           {mobile ? (
             <div className="d-flex justify-content-around">

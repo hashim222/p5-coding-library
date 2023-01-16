@@ -46,7 +46,7 @@ const PostPageContent = () => {
     <Row>
       <Col>
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className={commentStyles.CommentContainer}>
+        <Container className={`${commentStyles.CommentContainer} pb-3`}>
           {currentUser ? (
             <CommentCreateForm
               profile_id={currentUser.profile_id}
