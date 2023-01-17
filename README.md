@@ -58,6 +58,7 @@ Coding Library is a coding related community based social media website. Where u
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
   - In the future, I would like to add an option for struggling users to post their code so members of the community can help them with their issues.
+  - 
 
 ## Testings
 
@@ -69,9 +70,9 @@ Coding Library is a coding related community based social media website. Where u
 
   - One of the issues I encountered was that when user/owner clicked on the three-dot icon to edit their profile or post, the dropdown menu would open at the top of the Popular profile page, which I did not want. To fix it, I tried adding margin, but that caused a console error, so I stayed with the previous issue and documented it in the readme.
 
-    ![color scheme for the site](./src/assets/readme-images/three-dot-icon-bug-profile.png)
+    ![edit profile dropdown bug](./src/assets/readme-images/three-dot-icon-bug-profile.png)
 
-    ![color scheme for the site](./src/assets/readme-images/three-dot-icon-bug-posts.png)
+    ![edit post dropdown bug](./src/assets/readme-images/three-dot-icon-bug-posts.png)
 
 ## Technologies Used
 
@@ -109,13 +110,22 @@ The following technologies were used throughout the development of the project:
 
 ## Components
 
-- ### The following components have been implemented in this project and reused throughout:
+- ### The following components have been implemented in this project and reused throughout the app:
   - **Asset:** Using this component, spinners are loaded throughout the site and user messages are displayed if search results are not found.
+  - **Avatar:** Users can identify each other more easily with the help of this component, which is used throughout the site for user profile images.
+  - **DropdownToggle Page:** In the app, this component is used to edit posts and profiles by users/owners.
+  - **SideNavBar:** This component is present on every page of the application. The user can access most site features in one place, from any page, which improves UX. It also collapses into a sidenavbar menu for screen sizes medium and below.
+  - **LoggedInIcons:** Using this component, logged in users will be able to access all app links from the sidenavbar.
+  - **LoggedOutIcons:** Using this component, guest users will be able to access all app links from the sidenavbar.
+  - **NotFound:** Invalid urls were handled by this component. If users try to input invalid urls, they will see a page not found message.
+  - **UseRedirect:** When users access a page they shouldn't be viewing, this component redirects them to their home page.
+  - **UseClickOutsideToggle:** This component helps collapse a sideNavBar menu by clicking any link within the menu or by clicking outside the menu to collapse it for a smooth UX. Which By default, you must click on each link in the sidenavbar menu and then press the hamburger icon again to collapse it.
 
 ## Deployments
 
 ## Credits
 
 - ### Content
+
 - ### Media
   - `404 graphic` was taken from [Vecteezy](https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document) website.
