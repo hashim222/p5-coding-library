@@ -53,12 +53,31 @@ Coding Library is a coding related community based social media website. Where u
 
 ## Features
 
-- ### Existing Features
+- ### **Existing Features**
+
+  - #### **Guest User Site Sidebar**
+
+    - Guest users will have access to all of these links in the sidebar of the website, and by clicking each link they will be taken to other pages on the site.
+
+      ![guest user site sidebar](./src/assets/readme-images/desktop-guest-sidenavbar.png) ![guest user site sidebar tablet](./src/assets/readme-images/medium-devices-guest-sidenavbar.png)
+
+  - #### **Logged In User Site Sidebar**
+
+    - Logged in users will have access to all of these links in the sidebar of the website, and by clicking each link they will be taken to other pages on the site.
+
+      ![logged in user site sidebar](./src/assets/readme-images/desktop-logged-in-sidenavbar.png) ![logged in user site sidebar tablet](./src/assets/readme-images/medium-devices-logged-in-sidenavba.png)
+
+  - #### **About page**
+
+    - The app's About page provides information about the app and what to expect from it.
+
+      ![about page](./src/assets/readme-images/desktop-about-page.png)
+
+      ![about page for the tablet](./src/assets/readme-images/tablet-about-page.png) ![abput page for mobiles](./src/assets/readme-images/mobile-about-page.png)
 
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
   - In the future, I would like to add an option for struggling users to post their code so members of the community can help them with their issues.
-  - 
 
 ## Testings
 
