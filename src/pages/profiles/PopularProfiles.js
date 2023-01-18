@@ -18,7 +18,9 @@ const PopularProfiles = ({ mobile, desktop }) => {
     >
       {popularProfiles.results.length ? (
         <>
-          <p className={`${appStyles.DarkBluishcColor} fw-bold text-center`}>
+          <p
+            className={`${appStyles.DarkBluishcColor} fw-bold text-center mt-2`}
+          >
             Popular profiles:
           </p>
 

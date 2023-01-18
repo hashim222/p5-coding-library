@@ -4,6 +4,8 @@
 
 Coding Library is a coding related community based social media website. Where users can see helpful posts from other users or they can create their own posts on coding-related topics to help other users out. If the post is helpful, users may comment or like it, bookmark it, or follow the user who posted it.
 
+> **Note**: In order to achieve a merit grade, I created a last-minute ContactForm model based on a suggestion from my newly appointed mentor. Some of the places that you may notice that I'm not mentioning about the contact page are due to last minute changes that I added.
+
 ## Preview
 
 - ### Live View For [Project5 Coding Library Frontend ](https://p5-coding-library.herokuapp.com/)
@@ -21,6 +23,10 @@ Coding Library is a coding related community based social media website. Where u
     > Note: Flowchart was created before starting the project but forgot to include `Create Posts` for logged in users. Therefore, the flowchart may not match 100% with the final deployed version due to changes were made in the development.
 
     ![flowchart image](./src/assets/readme-images/flowchart.png)
+
+  - Contact page flowchart.
+
+    ![Contact page flowchart](./src/assets/readme-images/contact-flowchart.png)
 
 - ### Color scheme
 
@@ -47,7 +53,7 @@ Coding Library is a coding related community based social media website. Where u
 - This project was created using the agile methodology and github issue boards.
 
   - Project github issues can be accessed [here](https://github.com/hashim222/p5-coding-library/issues).
-  
+
   - To make my kanban board public, I changed visibility from private to public in project settings and It can be accessed here [here](https://github.com/users/hashim222/projects/11).
 
 - ### User Stories
@@ -128,6 +134,7 @@ The following technologies were used throughout the development of the project:
   - [geeksforgeeks](https://www.geeksforgeeks.org/)
   - [Diff checker](https://www.diffchecker.com/text-compare/)
   - [Am i responsive](https://ui.dev/amiresponsive)
+  - [whimsical Wireframe](https://whimsical.com/)
 
 ## Components
 

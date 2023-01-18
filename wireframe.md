@@ -21,3 +21,13 @@ Wireframe was created before I started working on the frontend. Throughout the d
 - ### Smaller Devices For The Logged In Users
 
   ![Smaller Devices For The Logged In Users](./src/assets/readme-images/Mobile-Logged%20in-User-Nav-page.png)
+
+- While I started with [Balsamiq Wireframe](https://balsamiq.com/wireframes/) to create my projects wireframe, my licence expired halfway through. I then used [whimsical Wireframe](https://whimsical.com/) to create the rest of the pages of my site's wireframe.
+
+- ### Single Post Page For Larger Devices
+
+  ![Single Post Page For Larger Devices](./src/assets/readme-images/desktop-single-post.png)
+
+- ### Single Post Page For Smaller Devices
+
+  ![Single Post Page For Smaller Devices](./src/assets/readme-images/tablet-single-post.png)
