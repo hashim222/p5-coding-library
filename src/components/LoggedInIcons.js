@@ -84,6 +84,21 @@ const LoggedInIcons = () => {
       </NavLink>
 
       <NavLink
+        to="/contact/create"
+        activeClassName={styles.ActiveLarge}
+        className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
+      >
+        <OverlayTrigger
+          placement="bottom"
+          overlay={<Tooltip>Contact Us</Tooltip>}
+        >
+          <span>
+            <i className="fa-solid fa-address-book"></i> Contact
+          </span>
+        </OverlayTrigger>
+      </NavLink>
+
+      <NavLink
         to="#"
         onClick={handleShow}
         className={`${styles.NavLinkForLargerScreens} d-none d-lg-block`}
@@ -133,6 +148,14 @@ const LoggedInIcons = () => {
         className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
       >
         <i className="fa-solid fa-star"></i>
+      </NavLink>
+
+      <NavLink
+        to="/contact/create"
+        activeClassName={styles.ActiveSmall}
+        className={`${styles.NavLinksForSmallerScreens} d-lg-none`}
+      >
+        <i className="fa-solid fa-address-book"></i>
       </NavLink>
 
       <NavLink

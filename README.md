@@ -44,8 +44,10 @@ Coding Library is a coding related community based social media website. Where u
 
 - ### Agile Methodology
 
-  - Project github issues can be accessed [here](https://github.com/hashim222/p5-coding-library/issues).
+- This project was created using the agile methodology and github issue boards.
 
+  - Project github issues can be accessed [here](https://github.com/hashim222/p5-coding-library/issues).
+  
   - To make my kanban board public, I changed visibility from private to public in project settings and It can be accessed here [here](https://github.com/users/hashim222/projects/11).
 
 - ### User Stories
