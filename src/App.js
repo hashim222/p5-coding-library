@@ -18,6 +18,7 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import ContactForm from "./pages/ContactForm";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./components/NotFound";
 
 function App() {
@@ -113,6 +114,7 @@ function App() {
                   path="/contact/create"
                   render={() => <ContactForm />}
                 />
+                <Route exact path="/thank_you" render={() => <ThankYou />} />
                 <Route render={() => <NotFound />} />
               </Switch>
             </Container>

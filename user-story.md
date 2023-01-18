@@ -106,6 +106,10 @@
 
   - As a site user, I would like to have a site registration option so I can access all the website's functionality
 
+- ### Contact Form
+
+  - As a site user, I would like to have an option for the contact form so I can get in touch with the site owner if I encounter any bugs.
+
 ## ADMIN STORIES
 
 - ### About Page
