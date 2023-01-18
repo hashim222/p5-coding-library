@@ -2,11 +2,14 @@ import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+import btnStyles from "../styles/Button.module.css";
+import appStyles from "../App.module.css";
+import styles from "../styles/ContactForm.module.css";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../api/axiosDefaults";
 import { UseRedirect } from "../hooks/UseRedirect";
+import { Container } from "react-bootstrap";
 
 const ContactForm = () => {
   UseRedirect("loggedOut");
@@ -45,10 +48,13 @@ const ContactForm = () => {
   };
 
   const textFields = (
-    <div className="text-center">
+    <div className="text-center pt-0 pt-lg-4">
       <Form.Group>
-        <Form.Label>Reason for contacting us</Form.Label>
+        <Form.Label className={appStyles.DarkBluishcColor}>
+          Add a reason
+        </Form.Label>
         <Form.Control
+          className={appStyles.Input}
           type="text"
           name="reason"
           value={reason}
@@ -62,11 +68,12 @@ const ContactForm = () => {
       ))}
 
       <Form.Group>
-        <Form.Label>Details</Form.Label>
+        <Form.Label className={appStyles.DarkBluishcColor}>Message</Form.Label>
         <Form.Control
           as="textarea"
-          rows={5}
+          rows={6}
           name="content"
+          className={appStyles.Input}
           value={content}
           onChange={handleChange}
         />
@@ -77,17 +84,31 @@ const ContactForm = () => {
         </Alert>
       ))}
 
-      <Button onClick={() => history.goBack()}>Cancel</Button>
-      <Button type="submit">Send</Button>
+      <Button
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} mt-3 mb-0`}
+        onClick={() => history.goBack()}
+      >
+        Cancel
+      </Button>
+      <Button
+        className={`${btnStyles.FormBtns} ${btnStyles.Button} ${btnStyles.BtnHover} mt-3 mb-0`}
+        type="submit"
+      >
+        Send
+      </Button>
     </div>
   );
 
   return (
-    <Container>
-      <Form onSubmit={handleSubmit}>
-        <Container>{textFields}</Container>
-      </Form>
-    </Container>
+    <Form className="mt-2 mt-md-5" onSubmit={handleSubmit}>
+      <Container
+        className={`${styles.Container} d-flex flex-column justify-content-center pb-3 pt-2`}
+      >
+        <h1 className={styles.HeaderText}>Get In Touch With Us</h1>
+        <hr className={styles.BorderBottom} />
+        <div>{textFields}</div>
+      </Container>
+    </Form>
   );
 };
 
