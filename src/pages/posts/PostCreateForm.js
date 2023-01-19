@@ -3,15 +3,13 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
-import {
-  Button,
-  Col,
-  Container,
-  Form,
-  Image,
-  Row,
-  Alert,
-} from "react-bootstrap";
+import Image from "react-bootstrap/Image";
+import Alert from "react-bootstrap/Alert";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { UseRedirect } from "../../hooks/UseRedirect";
@@ -120,12 +118,8 @@ const PostCreateForm = () => {
   );
 
   return (
-    <Form
-      onSubmit={handleSubmit}
-      className="mt-2 mt-md-5"
-    >
-      <Row 
-      >
+    <Form onSubmit={handleSubmit} className="mt-2 mt-md-5">
+      <Row>
         <Col className="py-2 p-0 p-md-2">
           <Container
             className={`${styles.Container} d-flex flex-column justify-content-center pb-3 pt-2`}

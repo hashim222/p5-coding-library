@@ -1,5 +1,7 @@
-import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import styles from "./App.module.css";
 import SideNavBar from "./components/SideNavBar";
 import { Route, Switch } from "react-router-dom";

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 import { UseRedirect } from "../hooks/UseRedirect";
 import styles from "../styles/ThankYou.module.css";
 import ThankYouImage from "../assets/thank-you.png";

@@ -33,7 +33,7 @@ const PostPageContent = () => {
         setPost({ results: [post] });
         setComments(comments);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
 

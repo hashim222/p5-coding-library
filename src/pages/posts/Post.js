@@ -2,7 +2,9 @@ import React from "react";
 import styles from "../../styles/PostContent.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Tooltip, OverlayTrigger } from "react-bootstrap";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Card from "react-bootstrap/Card";
+import Tooltip from "react-bootstrap/Tooltip";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -40,7 +42,7 @@ const Post = (props) => {
       await axiosRes.delete(`/posts/${id}/`);
       history.goBack();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -56,7 +58,7 @@ const Post = (props) => {
         }),
       }));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -72,7 +74,7 @@ const Post = (props) => {
         }),
       }));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -92,7 +94,7 @@ const Post = (props) => {
         }),
       }));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
@@ -112,7 +114,7 @@ const Post = (props) => {
         }),
       }));
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

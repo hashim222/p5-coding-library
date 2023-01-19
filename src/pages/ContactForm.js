@@ -9,7 +9,7 @@ import styles from "../styles/ContactForm.module.css";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../api/axiosDefaults";
 import { UseRedirect } from "../hooks/UseRedirect";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 const ContactForm = () => {
   UseRedirect("loggedOut");

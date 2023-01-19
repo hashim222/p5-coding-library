@@ -7,7 +7,10 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import noResults from "../../assets/results-not-found.png";
 import Asset from "../../components/Asset";
-import { Form, Col, Card } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
+
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 
@@ -25,7 +28,7 @@ const PostsPageContent = ({ message, filter = "" }) => {
         setPosts(data);
         setHasLoaded(true);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
 
@@ -40,9 +43,7 @@ const PostsPageContent = ({ message, filter = "" }) => {
   }, [filter, pathname, query]);
 
   return (
-    <Row
-      className="p-0 p-md-2 mt-0 mt-md-3"
-    >
+    <Row className="p-0 p-md-2 mt-0 mt-md-3">
       <Col>
         <i className={`fas fa-search ${styles.SearchBarIcon}`} />
         <Form

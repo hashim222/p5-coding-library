@@ -1,5 +1,7 @@
 import React from "react";
-import { Col, Row, Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import styles from "./../styles/About.module.css";
 import appStyles from "../App.module.css";
 

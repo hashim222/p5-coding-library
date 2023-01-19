@@ -62,7 +62,7 @@ const ProfileEditForm = () => {
             image,
           });
         } catch (error) {
-          console.log(error);
+          // console.log(error);
           history.push("/");
         }
       } else {
@@ -103,7 +103,7 @@ const ProfileEditForm = () => {
       }));
       history.goBack();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setErrors(error.response?.data);
     }
   };
