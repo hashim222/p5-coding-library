@@ -14,6 +14,7 @@ import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../contexts/CurrentUserContext";
+import { removeTokenTimestamp } from "../utils/utils";
 
 const LoggedInIcons = () => {
   const [show, setShow] = useState(false);
@@ -30,6 +31,7 @@ const LoggedInIcons = () => {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
       history.push("/");
+      removeTokenTimestamp();
     } catch (error) {
       console.log(error);
     }
