@@ -89,6 +89,8 @@ Coding Library is a coding related community based social media website. Where u
 
 ## Testings
 
+- testings can be seen by going into the [testings.md](testings.md) file.
+
 ## Bugs
 
 - ### Fixed Bugs
