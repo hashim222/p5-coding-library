@@ -52,7 +52,11 @@ const SideNavBar = () => {
       </div>
 
       {/* Side Navbar for larger devices */}
-      <div variant="info" className="d-none d-lg-block">
+      <div
+        // eslint-disable-next-line
+        variant="info"
+        className="d-none d-lg-block"
+      >
         <Nav className="flex-column">
           <div className="mt-3 ml-3">
             <NavLink to="/">

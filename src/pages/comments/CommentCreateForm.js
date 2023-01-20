@@ -9,7 +9,7 @@ import btnStyles from "../../styles/Button.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
-function CommentCreateForm(props) {
+const CommentCreateForm = (props) => {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
@@ -21,7 +21,7 @@ function CommentCreateForm(props) {
     event.preventDefault();
     try {
       const { data } = await axiosRes.post("/comments/", {
-        'comment': content,
+        comment: content,
         post,
       });
       setComments((prevComments) => ({
@@ -68,6 +68,6 @@ function CommentCreateForm(props) {
       </button>
     </Form>
   );
-}
+};
 
 export default CommentCreateForm;

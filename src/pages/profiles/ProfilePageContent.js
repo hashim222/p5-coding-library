@@ -146,7 +146,10 @@ const ProfilePageContent = () => {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s posts</p>
+      {
+        // eslint-disable-next-line
+        <p className="text-center">{profile?.owner}'s posts</p>
+      }
       <hr />
       {profilePosts.results.length ? (
         <InfiniteScroll

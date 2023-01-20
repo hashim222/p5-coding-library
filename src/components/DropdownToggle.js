@@ -4,6 +4,7 @@ import styles from "../styles/DropdownToggle.module.css";
 import btnStyles from "../styles/Button.module.css";
 import { useHistory } from "react-router-dom";
 
+// eslint-disable-next-line react/display-name
 const EllipsisToggle = React.forwardRef(({ onClick }, ref) => (
   <i
     className={`fa-solid fa-ellipsis ${styles.DropdownIcon} ml-5 ml-lg-0 `}

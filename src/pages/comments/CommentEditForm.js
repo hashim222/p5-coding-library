@@ -6,7 +6,7 @@ import btnStyles from "../../styles/Button.module.css";
 
 import { axiosRes } from "../../api/axiosDefaults";
 
-function CommentEditForm(props) {
+const CommentEditForm = (props) => {
   const { id, comment, setShowEditForm, setComments } = props;
 
   const [formContent, setFormContent] = useState(comment);
@@ -70,6 +70,6 @@ function CommentEditForm(props) {
       </div>
     </Form>
   );
-}
+};
 
 export default CommentEditForm;
