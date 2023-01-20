@@ -40,7 +40,7 @@ const App = () => {
           </Col>
           <Col
             lg={{ span: 7, offset: 2 }}
-            md={{ span: 8, order: "first" }}
+            md={{ span: 7, order: "first" }}
             xs={{ order: "last" }}
             className="gx-0 gx-sm-1 pt-3 pt-sm-5 pt-lg-0"
           >
@@ -123,7 +123,7 @@ const App = () => {
           </Col>
           <Col
             lg={3}
-            md={{ span: 4, order: "last" }}
+            md={{ span: 5, order: "last" }}
             xs={{ order: "first" }}
             className="mt-5 pl-0 pr-0 pr-md-3"
           >

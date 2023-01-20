@@ -111,7 +111,11 @@ const ProfilePageContent = () => {
           <Col className="p-3">
             <div className={styles.UserProfileDetail}>
               <span>Name:</span>
-              {profile.name ? profile?.name : <i className="fa-solid fa-ban" />}
+              {profile.hasOwnProperty("name") && profile.name ? (
+                profile.name
+              ) : (
+                <i className="fa-solid fa-ban" />
+              )}
             </div>
             <div className={styles.UserProfileDetail}>
               <span>Coding experience:</span>
@@ -131,8 +135,8 @@ const ProfilePageContent = () => {
             </div>
             <div className={styles.UserProfileDetail}>
               <span>About me:</span>
-              {profile.about_me ? (
-                profile?.about_me
+              {profile.hasOwnProperty("about_me") && profile.about_me ? (
+                profile.about_me
               ) : (
                 <i className="fa-solid fa-ban" />
               )}

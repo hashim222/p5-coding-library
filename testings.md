@@ -28,4 +28,8 @@ Eslint was installed and configured locally. There was a lot of random errors we
 
 ## Lighthouse Check
 
-## Validators
+## W3C CSS Code Validator
+
+- All CSS code passed through the validator with no issues:
+
+  ![css code validation](./src/assets/readme-images/css-code-validation.png)
