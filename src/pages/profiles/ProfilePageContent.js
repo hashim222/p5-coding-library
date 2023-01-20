@@ -99,7 +99,7 @@ const ProfilePageContent = () => {
               </Button>
             ) : (
               <Button
-                className={`${btnStyles.Button} ${styles.FollowBtns}`}
+                className={`${btnStyles.Button} ${styles.FollowBtns} mt-3`}
                 onClick={() => handleFollow(profile)}
               >
                 Follow

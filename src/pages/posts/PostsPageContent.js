@@ -13,11 +13,13 @@ import Col from "react-bootstrap/Col";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 const PostsPageContent = ({ message, filter = "" }) => {
   const [posts, setPosts] = useState({ results: [] });
   const { pathname } = useLocation();
   const [hasLoaded, setHasLoaded] = useState(false);
+  const currentUser = useCurrentUser();
 
   const [query, setQuery] = useState("");
 
@@ -40,7 +42,7 @@ const PostsPageContent = ({ message, filter = "" }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, pathname, query]);
+  }, [filter, pathname, query, currentUser]);
 
   return (
     <Row className="p-0 p-md-2 mt-0 mt-md-3">

@@ -40,8 +40,6 @@ const PostPageContent = () => {
     handleMount();
   }, [id]);
 
-  // console.log(comments);
-
   return (
     <Row className="mt-2 mt-md-5">
       <Col>
