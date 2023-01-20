@@ -29,7 +29,7 @@ const About = () => {
               posts created by members who have logged in. By clicking on the
               profile icon, you will be able to see all the info such as their
               bio, including the posts they own. When you have access to a
-              user's profile page, you can get to know users who have the same
+              users profile page, you can get to know users who have the same
               interest in coding language, and you may be able to become friends
               and followers by pressing follow on their profile page. Our
               multiple features would not be available to you if you were not

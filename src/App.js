@@ -23,7 +23,7 @@ import ContactForm from "./pages/ContactForm";
 import ThankYou from "./pages/ThankYou";
 import NotFound from "./components/NotFound";
 
-function App() {
+const App = () => {
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
 
@@ -134,6 +134,6 @@ function App() {
       </Container>
     </div>
   );
-}
+};
 
 export default App;

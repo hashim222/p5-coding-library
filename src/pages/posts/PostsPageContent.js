@@ -42,7 +42,7 @@ const PostsPageContent = ({ message, filter = "" }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, pathname, query, currentUser]);
+  }, [filter, query, pathname, currentUser]);
 
   return (
     <Row className="p-0 p-md-2 mt-0 mt-md-3">
