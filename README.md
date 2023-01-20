@@ -103,6 +103,13 @@ Coding Library is a coding related community based social media website. Where u
 
     ![edit post dropdown bug](./src/assets/readme-images/three-dot-icon-bug-posts.png)
 
+  - I encountered the memory leak bug on the EditProfilePage page whenever I tried to edit the form.
+    So I contacted the tutor support, and even they couldn't figure out what was wrong. Later on Oisin/tutor sent me a [document](https://stackoverflow.com/questions/71258604/how-to-fix-react-warning-cant-perform-a-react-state-update-on-an-unmounted-co), Which says that this is a bug in react that will be fixed in the future and my mentor suggested that I should add this to the unfixed bug section in the readme.
+
+    ![edit profile memory leak bug form](./src/assets/readme-images/edit-profile-memory-leak-form.png)
+
+    ![edit profile memory leak bug](./src/assets/readme-images/edit-profile-memory-leak.png)
+
 ## Technologies Used
 
 The following technologies were used throughout the development of the project:

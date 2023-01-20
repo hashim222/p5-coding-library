@@ -47,3 +47,19 @@ Wireframe was created before I started working on the frontend. Throughout the d
 - ### My Profile Page For Smaller Devices
 
   ![My Profile Page For Smaller Devices](./src/assets/readme-images/tablet-my-profile.png)
+
+- ### Sign Up Page For Larger Devices
+
+  ![Sign Up Page For Larger Devices](./src/assets/readme-images/desktop-signup.png)
+
+- ### Sign Up Page For Smaller Devices
+
+  ![Sign Up Page For Smaller Devices](./src/assets/readme-images/tablet-signup.png)
+
+- ### Sign In Page For Larger Devices
+
+  ![Sign In Page For Larger Devices](./src/assets/readme-images/desktop-signin.png)
+
+- ### Sign In Page For Smaller Devices
+
+  ![Sign In Page For Smaller Devices](./src/assets/readme-images/tablet-signin.png)

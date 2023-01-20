@@ -10,7 +10,7 @@ Eslint was installed and configured locally. There was a lot of random errors we
 
 ![eslint rules](./src/assets/readme-images/eslint-rules.png)
 
-- Following errors were detected by ESLint and fixed by adding this command `./node_modules/.bin/eslint src/*.js`. which finds all the errors in the directory files.
+- Following errors were detected by ESLint and ran this command `./node_modules/.bin/eslint src/*.js` which finds all the errors in the directory files.
 
   > **Note**: Few places I've used `// eslint-disable-next-line` to disable eslint for a specific line because eslint was picking up random errors.
 
