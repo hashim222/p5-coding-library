@@ -42,9 +42,12 @@
   background-color: #f1f5f8ab;
   padding: 10px;
   border-radius: 5px;
+  height: 175px;
+  white-space: pre-wrap; 
+  word-break: break-word;
 }
 
 *::-webkit-scrollbar {
-  height: 7px;
-  width: 7px;
+  height: 8px;
+  width: 8px;
 }

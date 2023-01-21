@@ -2,7 +2,31 @@
 
 Both the development and deployed versions of this project has been manually tested multiple times.
 
-## CRUD Functionality Testings
+## Feature Testings
+
+- **Profile TestCases**
+
+  ![Profile TestCases](./src/assets/readme-images/profiles-testcases.png)
+
+- **Post TestCases**
+
+  ![Post TestCases](./src/assets/readme-images/posts-testcases.png)
+
+- **Comment TestCases**
+
+  ![Comment TestCases](./src/assets/readme-images/comments-testcases.png)
+
+- **Contact Form TestCases**
+
+  ![Contact Form TestCases](./src/assets/readme-images/contact-form-testcases.png)
+
+- **Auth TestCases**
+
+  ![Auth TestCases](./src/assets/readme-images/auth-testcases.png)
+
+- **Redirect Users TestCases**
+
+  ![Redirect Users TestCases](./src/assets/readme-images/redirect-user-testcases.png)
 
 ## Eslint
 
@@ -18,11 +42,11 @@ Eslint was installed and configured locally. There was a lot of random errors we
 
     ![eslint rules](./src/assets/readme-images/eslint-errors-1.png)
 
-  - **`./node_modules/.bin/eslint src/**/*.js`**
+  - **`./node_modules/.bin/eslint src/**/\*.js`\*\*
 
     ![eslint rules](./src/assets/readme-images/eslint-errors-2.png)
 
-  - **`./node_modules/.bin/eslint src/**/**/*.js`**
+  - **`./node_modules/.bin/eslint src/**/**/\*.js`**
 
     ![eslint rules](./src/assets/readme-images/eslint-errors-3.png)
 
