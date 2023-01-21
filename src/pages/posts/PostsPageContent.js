@@ -14,8 +14,10 @@ import Col from "react-bootstrap/Col";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { UseRedirect } from "../../hooks/UseRedirect";
 
 const PostsPageContent = ({ message, filter = "" }) => {
+  UseRedirect("loggedOut");
   const [posts, setPosts] = useState({ results: [] });
   const { pathname } = useLocation();
   const [hasLoaded, setHasLoaded] = useState(false);

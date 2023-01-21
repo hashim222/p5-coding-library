@@ -85,7 +85,7 @@ Coding Library is a coding related community based social media website. Where u
 
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
-  - In the future, I would like to add an option for struggling users to post their code so members of the community can help them with their issues.
+  - In the future, I would like to add an option for struggling users so they can add the part of the code they are working on and multiple images can be sent, so members of the community can better understand the issue and help them.
 
 ## Testings
 
@@ -95,9 +95,11 @@ Coding Library is a coding related community based social media website. Where u
 
 - ### Fixed Bugs
 
+  - When guest users try to add `/bookmarked_topics` to the url manually, they could see all posts that were bookmarked by other users. So to fix this bug, I've already created a custom `RedirectUsers` hook with the help of CI moments walkthrough project, which redirects guest users to the homepage if they try to access the authorized content.
+
 - ### Unfixed Bugs
 
-  - One of the issues I encountered was that when user/owner clicked on the three-dot icon to edit their profile or post, the dropdown menu would open at the top of the Popular profile page, which I did not want. To fix it, I tried adding margin, but that caused a console error, so I stayed with the previous issue and documented it in the readme.
+  - One of the issue I encountered was that when user/owner clicked on the three-dot icon to edit their profile or post, the dropdown menu would open at the top of the Popular profile page, which I didn't wanted. To fix it, I tried adding margin, but that caused a console error, so I stayed with the previous issue and documented it in the readme.
 
     ![edit profile dropdown bug](./src/assets/readme-images/three-dot-icon-bug-profile.png)
 
@@ -109,6 +111,20 @@ Coding Library is a coding related community based social media website. Where u
     ![edit profile memory leak bug form](./src/assets/readme-images/edit-profile-memory-leak-form.png)
 
     ![edit profile memory leak bug](./src/assets/readme-images/edit-profile-memory-leak.png)
+
+  - It's not just me; even the Code Institute Moment project has this bug too. In both cases, users can access the deleted post edit form, and when they try to submit the form, a `404 not found` error is displayed for the logged in user, and for a guest user `503(Service Unavailable)` error is displayed. I found out about this during the manual testing I was doing for my project. Even though users cannot do much with it, I still wanted to mention it in the bug section, and I will look into this in the future.
+
+    - **Deleted Post**
+
+      ![Deleted Post bug](./src/assets/readme-images/deleted-post-number.png)
+
+    - **Guest user has access to the deleted post edit form**
+
+      ![Guest user has access to the deleted post edit form bug](./src/assets/readme-images/guest-user-has-access-to-the-deleted-post-form-bug.png)
+
+    - **Logged in user has access to the deleted post edit form**
+
+      ![Logged in user has access to the deleted post edit form bug](./src/assets/readme-images/logged-in-user-has-access-to-the-deleted-post-form-bug.png)
 
 ## Technologies Used
 
