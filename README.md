@@ -75,13 +75,23 @@ Coding Library is a coding related community based social media website. Where u
 
       ![logged in user site sidebar](./src/assets/readme-images/desktop-logged-in-sidenavbar.png) ![logged in user site sidebar tablet](./src/assets/readme-images/medium-devices-logged-in-sidenavbar.png) ![logged in user site sidebar mobile](./src/assets/readme-images/mobile-devices-logged-in-sidenavbar.png)
 
+  - #### **Home Page**
+
+    - On the home page, the user can scroll down to see all the posts created by other users in the app so far
+
+      ![home page](./src/assets/readme-images/home-page.png)
+
+    - Each post can be searched either by typing the title of the post or by typing the username. Only the home page, followings feed, and bookmarked topics pages display the search bar option.
+
+      ![search post](./src/assets/readme-images/search-posts.png)
+
   - #### **About Page**
 
-    - By clicking on the `about us` link from the sidebar, the user is directed to the About pag,e which provides information about the app and what to expect from it.
+    - By clicking on the `about us` link from the sidebar, the user is directed to the About page, which provides information about the app and what to expect from it.
 
       ![about page](./src/assets/readme-images/desktop-about-page.png)
 
-      ![about page for the tablet](./src/assets/readme-images/tablet-about-page.png) ![abput page for mobiles](./src/assets/readme-images/mobile-about-page.png)
+      ![about page for the tablet](./src/assets/readme-images/tablet-about-page.png) ![about page for mobiles](./src/assets/readme-images/mobile-about-page.png)
 
   - #### **Create Topic Page**
 
@@ -125,9 +135,19 @@ Coding Library is a coding related community based social media website. Where u
 
     - A popular profile component will be displayed on all pages of the site.
 
-    - New users will not see any feeds unless they follow a user who has posted something
+      ![popular profiles desktop](./src/assets/readme-images/desktop-popular-profiles.png)
 
-    - Logged in users will have access to the follow and unfollow buttons on the popualr profile. Upon clicking the follow button, user will only see posts from the users they are following.
+      ![popular profiles tablet](./src/assets/readme-images/tablet-popular-profiles.png)
+
+    - New users will not see any feeds unless they follow a user who has posted something.
+
+      ![results not found follow the user](./src/assets/readme-images/result-not-found-follow-the-user.png)
+
+    - Logged in users will have access to the follow and unfollow buttons on the popular profile section. After clicking the follow button, a user will see the unfollow button, both in the popular profile section and on their profile page.
+
+      ![popular profile section following](./src/assets/readme-images/popular-profile-page-following.png)
+
+      ![profile page followings](./src/assets/readme-images/profile-page-following.png)
 
     - Each time a user follows another user, the following count will go up for the user who is following and the follower count will go up for the user he just followed.
 
@@ -137,17 +157,29 @@ Coding Library is a coding related community based social media website. Where u
 
     - By clicking on the `Bookmarked Topic` link from the sidebar, the user will be directed to the bookmarked topic page. Here they can see all the posts they've bookmarked.
 
-    - To remove a post from the bookmarked page, click the bookmark icon again on the posts they are not interested in, and the bookmark icon will lose its light blue background colour. After refreshing the page the post will be removed.
+    - To remove a post from the bookmarked page, click the bookmark icon again on the posts they are not interested in, and the bookmark icon will lose its light blue background colour. After refreshing the page the post will be removed from `Bookmarked Topic` page.
+
+      ![bookmarkd topic](./src/assets/readme-images/bookmarked-topic.png)
+
+      ![removed bookmark](./src/assets/readme-images/removed-from-bookmark.png)
 
     - Users who have not bookmarked any posts will not see any posts on the page.
 
+      ![result not found bookmark the post](./src/assets/readme-images/result-not-found-bookmark-the-post.png)
+
   - #### **Contact Us Page**
 
-    - By clicking on the `Contact Us` link from the sidebar, the user will be directed to the contact us form. Here they can contact the site admin
+    - By clicking on the `Contact Us` link from the sidebar, the user will be directed to the contact us form. Here they can contact the site admin.
 
     - Upon completing the form, users will be sent to the thank you page, and after 4 seconds, they will be redirect to the home page.
 
+      ![fill ythe contact form](./src/assets/readme-images/fill-contact-form.png)
+
+      ![thank you for sending the message](./src/assets/readme-images/successfully-submitted.png)
+
     - The admin of the site can see the message in the admin panel.
+
+      ![admin can see messages](./src/assets/readme-images/admin-can-see-message.png)
 
   - #### **Logout**
 
@@ -172,6 +204,8 @@ Coding Library is a coding related community based social media website. Where u
   - #### **Sign In Page**
 
     - By clicking on the `Sign In` link from the sidebar, users can sign in if they already have an account, if not they must sign up first.
+
+  - #### **Page Not Found**
 
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
