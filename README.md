@@ -73,19 +73,80 @@ Coding Library is a coding related community based social media website. Where u
 
     - Logged in users will have access to all of these links in the sidebar of the website, and by clicking each link they will be taken to other pages on the site.
 
-      ![logged in user site sidebar](./src/assets/readme-images/desktop-logged-in-sidenavbar.png) ![logged in user site sidebar tablet](./src/assets/readme-images/medium-devices-logged-in-sidenavba.png)
+      ![logged in user site sidebar](./src/assets/readme-images/desktop-logged-in-sidenavbar.png) ![logged in user site sidebar tablet](./src/assets/readme-images/medium-devices-logged-in-sidenavbar.png) ![logged in user site sidebar mobile](./src/assets/readme-images/mobile-devices-logged-in-sidenavbar.png)
 
-  - #### **About page**
+  - #### **About Page**
 
-    - The app's About page provides information about the app and what to expect from it.
+    - By clicking on the `about us` link from the sidebar, the user is directed to the About pag,e which provides information about the app and what to expect from it.
 
       ![about page](./src/assets/readme-images/desktop-about-page.png)
 
       ![about page for the tablet](./src/assets/readme-images/tablet-about-page.png) ![abput page for mobiles](./src/assets/readme-images/mobile-about-page.png)
 
+  - #### **Create Topic Page**
+
+    - By clicking on the `Followings Feed` link from the sidebar, the user will be directed to the followings feed page. Here they can see all the posts from the users they are following.
+
+    - A popular profile component will be displayed on all pages of the site.
+
+    - New users will not see any feeds unless they follow a user who has posted something
+
+    - Logged in users will have access to the follow and unfollow buttons on the popular profile. Upon clicking the follow button, logged in users will only see posts from the users they are following.
+
+    - Users can unfollow a user if they do not wish to receive feeds from them.
+
+  - #### **Followings Feed Page**
+
+    - By clicking on the `Followings Feed` link from the sidebar, the user will directed to the followings feed page. Here they can see all the posts from the users they are following.
+
+    - A popular profile component will be displayed on all pages of the site.
+
+    - New users will not see any feeds unless they follow a user who has posted something
+
+    - Logged in users will have access to the follow and unfollow buttons on the popualr profile. Upon clicking the follow button, user will only see posts from the users they are following.
+
+    - Each time a user follows another user, the following count will go up for the user who is following and the follower count will go up for the user he just followed.
+
+    - Users can unfollow users if they don't want to receive feeds from the user they are following.
+
+  - #### **Bookmarked Topic Page**
+
+    - By clicking on the `Bookmarked Topic` link from the sidebar, the user will be directed to the bookmarked topic page. Here they can see all the posts they've bookmarked.
+
+    - To remove a post from the bookmarked page, click the bookmark icon again on the posts they are not interested in, and the bookmark icon will lose its light blue background colour. After refreshing the page the post will be removed.
+
+    - Users who have not bookmarked any posts will not see any posts on the page.
+
+  - #### **Contact Us Page**
+
+    - By clicking on the `Contact Us` link from the sidebar, the user will be directed to the contact us form. Here they can contact the site admin
+
+    - Upon completing the form, users will be sent to the thank you page, and after 4 seconds, they will be redirect to the home page.
+
+    - The admin of the site can see the message in the admin panel.
+
+  - #### **Logout**
+
+    - By clicking on the `logout` link from the sidebar, a modal will display which will ask the user Are you sure you want to logout? By clicking no, they will be taken back to the previous page they were in, and by clicking yes, they will be logged out.
+
+  - #### **My Profile Page**
+
+  - #### **Sign up Page**
+
+    - By clicking on the `Sign Up` link from the sidebar, new users can register with the site, and after successfully registering, users are directed to the sign in page.
+
+    - The user does not have to sign up if they already have an account; they can just sign in with their existing credentials
+
+  - #### **Sign In Page**
+
+    - By clicking on the `Sign In` link from the sidebar, users can sign in if they already have an account, if not they must sign up first.
+
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
   - In the future, I would like to add an option for struggling users so they can add the part of the code they are working on and multiple images can be sent, so members of the community can better understand the issue and help them.
+  - When creating a post or comment, users can choose between a variety of text styles for the textfields.
+  - To make signing up easier for new users, I would like to add an option of a one-click signup button where users who already have an account with Google or Facebook, can sign up by simply clicking on Google or facebook.
+  - A better login and registration form will be added in the future, and users will only be allowed to register if they verify their email address.
 
 ## Testings
 
@@ -95,7 +156,11 @@ Coding Library is a coding related community based social media website. Where u
 
 - ### Fixed Bugs
 
-  - When guest users try to add `/bookmarked_topics` to the url manually, they could see all posts that were bookmarked by other users. So to fix this bug, I've already created a custom `RedirectUsers` hook with the help of CI moments walkthrough project, which redirects guest users to the homepage if they try to access the authorized content.
+  - At the beginning of the project, I encountered this bug when I tried to fetch a request from the API for the first time for a signup form, which after submitting would take me to an empty page with a lot of console errors. The issue was so frustrating that even a few tutors were unable to determine what was causing it. Later on, another tutor asked me if the link in the Axios default was correct, and that turned out to be the issue. The link I added was for the deployed frontend, not the backend deployed API. Replacing it with the deployed API link fixed the problem.
+
+    ![axios default bug](./src/assets/readme-images/axios-default-bug.png)
+
+- When guest users try to add `/bookmarked_topics` to the url manually, they could see all posts that were bookmarked by other users. So to fix this bug, I've already created a custom `UseRedirect()` hook with the help of CI moments walkthrough project, which redirects guest users to the homepage if they try to access the authorized content. Adding `UseRedirect("loggedOut")` to the PostsPageContent fixed the bug for me.
 
 - ### Unfixed Bugs
 

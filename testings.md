@@ -42,11 +42,11 @@ Eslint was installed and configured locally. There was a lot of random errors we
 
     ![eslint rules](./src/assets/readme-images/eslint-errors-1.png)
 
-  - **`./node_modules/.bin/eslint src/**/\*.js`\*\*
+  - **`./node_modules/.bin/eslint src/**/*.js`**
 
     ![eslint rules](./src/assets/readme-images/eslint-errors-2.png)
 
-  - **`./node_modules/.bin/eslint src/**/**/\*.js`**
+  - **`./node_modules/.bin/eslint src/**/**/*.js`**
 
     ![eslint rules](./src/assets/readme-images/eslint-errors-3.png)
 
