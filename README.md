@@ -254,7 +254,7 @@ Coding Library is a coding related community based social media website. Where u
 
     ![axios default bug](./src/assets/readme-images/axios-default-bug.png)
 
-- When guest users try to add `/bookmarked_topics` to the url manually, they could see all posts that were bookmarked by other users. So to fix this bug, I've already created a custom `UseRedirect()` hook with the help of CI moments walkthrough project, which redirects guest users to the homepage if they try to access the authorized content. Adding `UseRedirect("loggedOut")` to the PostsPageContent fixed the bug for me.
+  - When guest users try to add `/bookmarked_topics` to the url manually, they could see all posts that were bookmarked by other users. So to fix this bug, I've already created a custom `UseRedirect()` hook with the help of CI moments walkthrough project, which redirects guest users to the homepage if they try to access the authorized content. Adding `UseRedirect("loggedOut")` to the PostsPageContent fixed the bug for me.
 
 - ### Unfixed Bugs
 
@@ -271,6 +271,10 @@ Coding Library is a coding related community based social media website. Where u
 
     ![edit profile memory leak bug](./src/assets/readme-images/edit-profile-memory-leak.png)
 
+  - The next issue I found is similar to the edit profile page, but this issue appears if the user navigates through the sidebar multiple times. The error would display in the console randomly, and I was unable to figure out what was causing it because all the features of the were working as expected, so I left it in the bug section so I can investigate this in the future.
+
+    ![post page content memory leak bug](./src/assets/readme-images/post-page-content-memory-leak.png)
+
   - It's not just me; even the Code Institute Moment project has this bug too. In both cases, users can access the deleted post edit form, and when they try to submit the form, the form will not submit, but in the console a `404 not found` error is displayed for the logged in user, and for a guest user `503(Service Unavailable)` error is displayed. I found out about this during the manual testing I was doing for my project. Even though users cannot do much with it, I still wanted to mention it in the bug section, and I will look into this in the future.
 
     - **Deleted Post**
@@ -284,6 +288,8 @@ Coding Library is a coding related community based social media website. Where u
     - **Logged in user has access to the deleted post edit form**
 
       ![Logged in user has access to the deleted post edit form bug](./src/assets/readme-images/logged-in-user-has-access-to-the-deleted-post-form-bug.png)
+
+  - Using the iPhone 11 Safari and Samsung internet browsers on mobile, I found a bug that prevented users from logging in, though their accounts were still visible in the admin panel. Where those login credentials that didn't work on the devices listed above worked on my Samsung Galaxy s20s chrome and firefox browser. This bug was discovered last minute by my little sister, who uses an iphone. I then tested it on my mom's Samsung internet browser where it didn't work either. However, her Chrome browser was able to log into the website.
 
 ## Technologies Used
 
@@ -360,6 +366,28 @@ The following technologies were used throughout the development of the project:
   - To view the newly deployed app, click the `Open App` button and you are good to go.
 
 - ### Final Deployments
+
+  - In the scripts section of `package.json` in your gitpod workspace, add the following command:
+
+    ```
+    "heroku-prebuild": "npm install -g serve",
+    ```
+
+  - Add a `Procfile` at the root of the project with the following web command:
+
+    ```
+    web: serve -s build
+    ```
+
+  - To add everything to the github, add these commands to the terminal
+
+    ```
+      git add .
+      git commit -m 'set up react project'
+      git push
+    ```
+
+  - To deploy the project, navigate to the heroku deploy tab and click on the deploy button at the bottom of the page.
 
 ## Credits
 
