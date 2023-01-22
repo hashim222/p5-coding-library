@@ -85,6 +85,8 @@ Coding Library is a coding related community based social media website. Where u
 
       ![search post](./src/assets/readme-images/search-posts.png)
 
+    - If the page contains more than 10 posts, or if each post has more than 10 comments, an infinite scroll will show up.
+
   - #### **About Page**
 
     - By clicking on the `about us` link from the sidebar, the user is directed to the About page, which provides information about the app and what to expect from it.
@@ -135,9 +137,13 @@ Coding Library is a coding related community based social media website. Where u
 
     - A popular profile component will be displayed on all pages of the site.
 
+    - For desktop, only the last 10 profiles that were created will be shown as the popular profile, while on smaller devices, only four profiles will be shown.
+
       ![popular profiles desktop](./src/assets/readme-images/desktop-popular-profiles.png)
 
       ![popular profiles tablet](./src/assets/readme-images/tablet-popular-profiles.png)
+
+    - Users can view the profile of any user by clicking their profile avatar from the popular profile component.
 
     - New users will not see any feeds unless they follow a user who has posted something.
 
@@ -183,7 +189,9 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Logout**
 
-    - By clicking on the `Logout` link from the sidebar, a modal will display which will ask the user Are you sure you want to logout? By clicking no, they will be taken back to the previous page they were in, and by clicking yes, they will be logged out.
+    - By clicking on the `Logout` link from the sidebar, a modal will display which will ask the user: `Are you sure you want to logout?` By clicking no, they will be taken back to the previous page they were in, and by clicking yes, they will be logged out.
+
+      ![logout modal](./src/assets/readme-images/logout-modal.png)
 
   - #### **My Profile Page**
 
@@ -191,9 +199,19 @@ Coding Library is a coding related community based social media website. Where u
 
     - The profile page displays the user's username, profile avatar, posts count, followers count, followings count, name of profile owner, coding experience, favourite programming language, about me, and profile posts.
 
-    - The profile owner can edit the profile, change the username, and change the password by clicking the three dots icon at the top of the page.
+      ![owner profile page](./src/assets/readme-images/view-profile-page.png)
+
+    - The profile owner can edit their profile bio, change the username, and change the password by clicking the three dots icon at the top of the page.
+
+      ![edit toggle](./src/assets/readme-images/edit-option-for-profile.png)
+      ![edit profil bio](./src/assets/readme-images/edit-profile-bio.png)
+      ![change username](./src/assets/readme-images/change-username.png)
+      ![change password](./src/assets/readme-images/change-password.png)
 
     - A block icon will show up in the owner's profile if no fields have been updated yet, which will disappear after updating the fields.
+
+      ![profile has not been updated yet](./src/assets/readme-images/profile-not-editied-yt.png)
+      ![profile has been updated](./src/assets/readme-images/profile-has-been-updated.png)
 
   - #### **Sign up Page**
 
@@ -201,11 +219,19 @@ Coding Library is a coding related community based social media website. Where u
 
     - The user does not have to sign up if they already have an account; they can just sign in with their existing credentials
 
+      ![sign up page](./src/assets/readme-images/signup-page.png)
+
   - #### **Sign In Page**
 
     - By clicking on the `Sign In` link from the sidebar, users can sign in if they already have an account, if not they must sign up first.
 
+      ![sign in page](./src/assets/readme-images/signin-page.png)
+
   - #### **Page Not Found**
+
+    - An error 404 page will be displayed if the user enters a URL that does not exist.
+
+      ![404 page not found](./src/assets/readme-images/404-page-not-found.png)
 
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
