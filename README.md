@@ -6,6 +6,8 @@ Coding Library is a coding related community based social media website. Where u
 
 > **Note**: In order to achieve a merit grade, I created a last-minute ContactForm model based on a suggestion from my newly appointed mentor. Some of the places that you may notice that I'm not mentioning about the contact page are due to last minute changes that I added.
 
+![responsive image for the app](./src/assets/readme-images/responsive-coding-library.png)
+
 ## Preview
 
 - ### Live View For [Project5 Coding Library Frontend ](https://p5-coding-library.herokuapp.com/)
@@ -301,6 +303,7 @@ The following technologies were used throughout the development of the project:
 
 - ### Other Technologies
 
+  - [NodeJs](https://nodejs.org/en/)
   - [W3School](https://www.w3schools.com/)
   - [Stackoverflow](https://stackoverflow.com/)
   - [Git](https://git-scm.com/)
@@ -317,6 +320,7 @@ The following technologies were used throughout the development of the project:
   - [Diff checker](https://www.diffchecker.com/text-compare/)
   - [Am i responsive](https://ui.dev/amiresponsive)
   - [whimsical Wireframe](https://whimsical.com/)
+  - [Pexels](https://www.pexels.com/)
 
 ## Components
 
@@ -332,6 +336,30 @@ The following technologies were used throughout the development of the project:
   - **UseClickOutsideToggle:** This component helps collapse a sideNavBar menu by clicking any link within the menu or by clicking outside the menu to collapse it for a smooth UX. Which By default, you must click on each link in the sidenavbar menu and then press the hamburger icon again to collapse it.
 
 ## Deployments
+
+- ### Set up Project
+
+  - Create a new workspace by clicking on the `Gitpod` button.
+
+  - Once the workspace has loaded, run this command on the terminal to create a react app: `npx create-react-app . --use-npm`
+
+  - You can check whether the app is working by running the terminal command `npm start` once it has been installed. Browser should open with the react logo.
+
+  - Remove the logo import from the top of App.js, and replace the React Header element with a custom `<h1>Hello world</h1>`.
+
+  - Make sure to include `"engines": { "node": "16.18.0" }` Dependency in the `package.json`, you may not need it, but when I first installed npm react it was missing from my `package.json` file, and I was getting an error when I deployed on the Heroku for the first time.
+
+  - Confirm the changes have rendered in the browser preview then add these commands to the terminal `git add .`, `git commit -m 'set up react project'` and `git push`.
+
+  - Go to the `Deploy` tab on Heroku and click on the `Deployment Method` option and select `GitHub`.
+
+  - Go to `App connected to GitHub` and search for the relevant repository. Click `Connect` to connect to that repository.
+
+  - Go to `Manual Deploy` section and click `Deploy Branch`. Click on `build logs` to monitor build and ensure deployment is successful. Build is complete when log states `Build succeeded!`.
+
+  - To view the newly deployed app, click the `Open App` button and you are good to go.
+
+- ### Final Deployments
 
 ## Credits
 

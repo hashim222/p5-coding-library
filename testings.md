@@ -52,6 +52,16 @@ Eslint was installed and configured locally. There was a lot of random errors we
 
 ## Lighthouse Check
 
+- When I performed the Lighthouse test on my laptop, I received a performance score of 22. This has previously been an issue on my laptop too, as the lighthouse score was displaying a lower score on previous projects. So I asked my friend to check the lighthouse on his desktop, and I had a performance score of 80, and a best practice score of 83. However, mobile results were still low for two main reasons: serve images in next-generation formats and reduce unused JavaScript. Unfortunately, I did not have enough time to fix those in this iteration. But I will fix those in the future.
+
+  - ### Desktop
+
+    ![desktop lighthouse](./src/assets/readme-images/desktop-lighouse.png)
+
+  - ### Mobile
+
+    ![mobile lighthouse](./src/assets/readme-images/Mobile-lighouse.png)
+
 ## W3C CSS Code Validator
 
 - All CSS code passed through the validator with no issues:
