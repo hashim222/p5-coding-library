@@ -85,15 +85,39 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Create Topic Page**
 
-    - By clicking on the `Followings Feed` link from the sidebar, the user will be directed to the followings feed page. Here they can see all the posts from the users they are following.
+    - By clicking on the `Create Topic` link from the sidebar, the user is directed to the create post form. Here the user can upload their image, add a post title, and caption of the post.
 
-    - A popular profile component will be displayed on all pages of the site.
+      ![Create post form desktop](./src/assets/readme-images/desktop-create-post-form.png)
+      ![Create post form tablet](./src/assets/readme-images/tablet-create-post-form.png)
+      ![Create post form mobiles](./src/assets/readme-images/mobile-create-post-form.png)
 
-    - New users will not see any feeds unless they follow a user who has posted something
+    - The user will receive an error message if they forget to fill out one of the fields or upload an image that is larger than 2MB.
 
-    - Logged in users will have access to the follow and unfollow buttons on the popular profile. Upon clicking the follow button, logged in users will only see posts from the users they are following.
+      ![Create post form mobiles](./src/assets/readme-images/create-post-errors.png)
 
-    - Users can unfollow a user if they do not wish to receive feeds from them.
+    - Upon successfully creating the post, the user will be redirected to the post detail page where they can see what they have posted.
+
+      ![post detail page](./src/assets/readme-images/post-detail-page.png)
+
+  - #### **Post Detail Page**
+
+    - Post owners can edit and delete their posts by clicking the three dots icon at the top of the page.
+
+      ![post detail page](./src/assets/readme-images/edit-delete-post.png)
+
+    - If the post caption has a lot of text, a scrollbar will show up, which is added for users to move quickly to the next post.
+
+      ![post scrollbar](./src/assets/readme-images/post-scrollbar-text.png)
+
+    - Other logged-in users will be able to like, bookmark, and comment on the post. Each time a user likes and comments, the number of likes and comments will increase.
+
+      > **Note**: Owners of posts and guest users will not be able to like posts. However, post owners can comment on their own post.
+
+      ![likes bookmark comment icons](./src/assets/readme-images/like-bookmark-comments-icons.png)
+
+    - The comment owner can see the three dots icon button at the top of the comment they made, and by clicking the pencil icon, they can edit their comments. They can also click on the trash icon button to remove their comment from the post.
+
+      ![edit delete comments](./src/assets/readme-images/edit-delete-comment.png)
 
   - #### **Followings Feed Page**
 
@@ -127,9 +151,17 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Logout**
 
-    - By clicking on the `logout` link from the sidebar, a modal will display which will ask the user Are you sure you want to logout? By clicking no, they will be taken back to the previous page they were in, and by clicking yes, they will be logged out.
+    - By clicking on the `Logout` link from the sidebar, a modal will display which will ask the user Are you sure you want to logout? By clicking no, they will be taken back to the previous page they were in, and by clicking yes, they will be logged out.
 
   - #### **My Profile Page**
+
+    - By clicking on the `My Profile` link from the sidebar, the user will directed to the my profile page.
+
+    - The profile page displays the user's username, profile avatar, posts count, followers count, followings count, name of profile owner, coding experience, favourite programming language, about me, and profile posts.
+
+    - The profile owner can edit the profile, change the username, and change the password by clicking the three dots icon at the top of the page.
+
+    - A block icon will show up in the owner's profile if no fields have been updated yet, which will disappear after updating the fields.
 
   - #### **Sign up Page**
 
@@ -143,7 +175,7 @@ Coding Library is a coding related community based social media website. Where u
 
 - ### Future Features
   - In the future I would like to add a chat option, which would allow users to communicate privately with each other.
-  - In the future, I would like to add an option for struggling users so they can add the part of the code they are working on and multiple images can be sent, so members of the community can better understand the issue and help them.
+  - In the future, I would like to add an option for struggling users so they can add the part of the code they are working on and multiple images can be sent, so members of the community can better understand the issue and can help them.
   - When creating a post or comment, users can choose between a variety of text styles for the textfields.
   - To make signing up easier for new users, I would like to add an option of a one-click signup button where users who already have an account with Google or Facebook, can sign up by simply clicking on Google or facebook.
   - A better login and registration form will be added in the future, and users will only be allowed to register if they verify their email address.
@@ -177,7 +209,7 @@ Coding Library is a coding related community based social media website. Where u
 
     ![edit profile memory leak bug](./src/assets/readme-images/edit-profile-memory-leak.png)
 
-  - It's not just me; even the Code Institute Moment project has this bug too. In both cases, users can access the deleted post edit form, and when they try to submit the form, a `404 not found` error is displayed for the logged in user, and for a guest user `503(Service Unavailable)` error is displayed. I found out about this during the manual testing I was doing for my project. Even though users cannot do much with it, I still wanted to mention it in the bug section, and I will look into this in the future.
+  - It's not just me; even the Code Institute Moment project has this bug too. In both cases, users can access the deleted post edit form, and when they try to submit the form, the form will not submit, but in the console a `404 not found` error is displayed for the logged in user, and for a guest user `503(Service Unavailable)` error is displayed. I found out about this during the manual testing I was doing for my project. Even though users cannot do much with it, I still wanted to mention it in the bug section, and I will look into this in the future.
 
     - **Deleted Post**
 
