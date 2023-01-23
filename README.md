@@ -4,7 +4,7 @@
 
 Coding Library is a coding related community based social media website. Where users can see helpful posts from other users or they can create their own posts on coding-related topics to help other users out. If the post is helpful, users may comment or like it, bookmark it, or follow the user who posted it.
 
-> **Note**: In order to achieve a merit grade, I created a last-minute ContactForm model based on a suggestion from my newly appointed mentor. Some of the places that you may notice that I'm not mentioning about the contact page are due to last minute changes that I added.
+> **Note**: In order to achieve a merit grade, I created a last-minute ContactForm model based on a suggestion from my newly appointed mentor. Some of the places that you may notice that I'm not mentioning about the contact page are due to last minute modal was added.
 
 ![responsive image for the app](./src/assets/readme-images/responsive-coding-library.png)
 
@@ -58,6 +58,9 @@ Coding Library is a coding related community based social media website. Where u
 
   - To make my kanban board public, I changed visibility from private to public in project settings and It can be accessed here [here](https://github.com/users/hashim222/projects/11).
 
+    ![agile methodology 1](./src/assets/readme-images/agile-methodology-1.png)
+    ![agile methodology 2](./src/assets/readme-images/agile-methodology-2.png)
+
 - ### User Stories
   You can view all the user stories and admin stories [here](user-story.md)
 
@@ -79,11 +82,12 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Home Page**
 
-    - On the home page, the user can scroll down to see all the posts created by other users in the app so far
+    - On the home page, users can scroll down to see all the posts created by other users in the app so far.
 
       ![home page](./src/assets/readme-images/home-page.png)
 
-    - Each post can be searched either by typing the title of the post or by typing the username. Only the home page, followings feed, and bookmarked topics pages display the search bar option.
+    - Each post can be searched either by typing the title of the post or by typing the username.
+    - The search bar is only visible on the home page, followings feed, and bookmarked topics pages.
 
       ![search post](./src/assets/readme-images/search-posts.png)
 
@@ -91,7 +95,7 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **About Page**
 
-    - By clicking on the `about us` link from the sidebar, the user is directed to the About page, which provides information about the app and what to expect from it.
+    - By clicking on the `about us` link from the sidebar, users will be directed to the About page, which provides information about the app and what to expect from it.
 
       ![about page](./src/assets/readme-images/desktop-about-page.png)
 
@@ -99,23 +103,23 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Create Topic Page**
 
-    - By clicking on the `Create Topic` link from the sidebar, the user is directed to the create post form. Here the user can upload their image, add a post title, and caption of the post.
+    - By clicking on the `Create Topic` link from the sidebar, users will be directed to the create post form. Here the user can upload their image, add a post title, and caption of the post.
 
       ![Create post form desktop](./src/assets/readme-images/desktop-create-post-form.png)
       ![Create post form tablet](./src/assets/readme-images/tablet-create-post-form.png)
       ![Create post form mobiles](./src/assets/readme-images/mobile-create-post-form.png)
 
-    - The user will receive an error message if they forget to fill out one of the fields or upload an image that is larger than 2MB.
+    - The user will receive an error message if they forget to fill out one of the field or upload an image that is larger than 2MB.
 
       ![Create post form mobiles](./src/assets/readme-images/create-post-errors.png)
 
-    - Upon successfully creating the post, the user will be redirected to the post detail page where they can see what they have posted.
+    - Upon successfully creating the post, users will be redirected to the post detail page where they can see what they have posted.
 
       ![post detail page](./src/assets/readme-images/post-detail-page.png)
 
   - #### **Post Detail Page**
 
-    - Post owners can edit and delete their posts by clicking the three dots icon at the top of the page.
+    - Post owners can edit and delete their own posts by clicking the three dots icon at the top of the page.
 
       ![post detail page](./src/assets/readme-images/edit-delete-post.png)
 
@@ -123,9 +127,9 @@ Coding Library is a coding related community based social media website. Where u
 
       ![post scrollbar](./src/assets/readme-images/post-scrollbar-text.png)
 
-    - Other logged-in users will be able to like, bookmark, and comment on the post. Each time a user likes and comments, the number of likes and comments will increase.
+    - Other logged-in users will be able to like, bookmark, and comment on the post. Each time a user likes and comments, the number of likes and comments will go up.
 
-      > **Note**: Owners of posts and guest users will not be able to like posts. However, post owners can comment on their own post.
+      > **Note**: `1-` Those posts owned by a user can't be liked or bookmarked by them, However, post owners can comment on their own post. `2-` A guest user cannot like, bookmark, or comment on the post
 
       ![likes bookmark comment icons](./src/assets/readme-images/like-bookmark-comments-icons.png)
 
@@ -135,11 +139,11 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Followings Feed Page**
 
-    - By clicking on the `Followings Feed` link from the sidebar, the user will directed to the followings feed page. Here they can see all the posts from the users they are following.
+    - By clicking on the `Followings Feed` link from the sidebar, users will directed to the followings feed page. Here they can see all the posts from the users they are following.
 
-    - A popular profile component will be displayed on all pages of the site.
+    - A popular profile component will be displayed on the all pages of the site.
 
-    - For desktop, only the last 10 profiles that were created will be shown as the popular profile, while on smaller devices, only four profiles will be shown.
+    - For desktop, only the last 10 profiles that were created will be shown on the popular profile, while on smaller devices, only four profiles will be shown.
 
       ![popular profiles desktop](./src/assets/readme-images/desktop-popular-profiles.png)
 
@@ -159,7 +163,7 @@ Coding Library is a coding related community based social media website. Where u
 
     - Each time a user follows another user, the following count will go up for the user who is following and the follower count will go up for the user he just followed.
 
-    - Users can unfollow users if they don't want to receive feeds from the user they are following.
+    - Users can unfollow users if they don't want to receive the feeds from the user they are following.
 
   - #### **Bookmarked Topic Page**
 
@@ -191,7 +195,7 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Logout**
 
-    - By clicking on the `Logout` link from the sidebar, a modal will display which will ask the user: `Are you sure you want to logout?` By clicking no, they will be taken back to the previous page they were in, and by clicking yes, they will be logged out.
+    - By clicking on the `Logout` link from the sidebar, a modal will display which will ask the user: `Are you sure you want to logout?` By clicking no, they will be taken back to the previous page they were in, and by clicking yes, they will logout from the app.
 
       ![logout modal](./src/assets/readme-images/logout-modal.png)
 
@@ -231,7 +235,7 @@ Coding Library is a coding related community based social media website. Where u
 
   - #### **Page Not Found**
 
-    - An error 404 page will be displayed if the user enters a URL that does not exist.
+    - A 404 error page will be displayed if the user enters a URL that does not exist.
 
       ![404 page not found](./src/assets/readme-images/404-page-not-found.png)
 
@@ -255,6 +259,11 @@ Coding Library is a coding related community based social media website. Where u
     ![axios default bug](./src/assets/readme-images/axios-default-bug.png)
 
   - When guest users try to add `/bookmarked_topics` to the url manually, they could see all posts that were bookmarked by other users. So to fix this bug, I've already created a custom `UseRedirect()` hook with the help of CI moments walkthrough project, which redirects guest users to the homepage if they try to access the authorized content. Adding `UseRedirect("loggedOut")` to the PostsPageContent fixed the bug for me.
+
+  - The bug was that I kept seeing an empty loading page without seeing any backend. I investigated further by going into the backend and there I kept seeing a user not found message instead of "Welcome to my Coding Library drf API!". Sean, the tutor support, looked into his desktop and said it worked fine on his desktop for both the frontend and backend, which I was confused about. Then he mentioned that you may be on a deleted user profile, which he was right about. I was on the deleted profile that was deleted early on from the admin panel was causing the problem. He suggested that I should try clearing the browser cookies which after doing it fixed the issue for me.
+
+    ![user not found error on the backend](./src/assets/readme-images/backend-user-not-found.png)
+    ![account was deletd which i was on](./src/assets/readme-images/loading-deleted-account-bug.png)
 
 - ### Unfixed Bugs
 
@@ -398,6 +407,7 @@ The following technologies were used throughout the development of the project:
 
   - Using the [CI Moment](https://github.com/Code-Institute-Solutions/moments) project walkthrough as a guide, I then customized the project to make it my own. The profile page, bookmark topics, and contact page were also updated.
   - [Gareth-McGirr mentor](https://github.com/Gareth-McGirr/body-doodles) and [Leah Fisher's pp5](https://github.com/cornishcoder1/pp5-react-frontend-the-winding-path) projects provided insight into what should be added into my readme file and what testing is required for my project.
+  - I would like to thank Sean tutor for helping me solve the user not found issue I was having.
   - [Grammarly](https://www.grammarly.com/) was used while creating the readme documentation to fix some grammar issues due to english being not my first language.
   - By making this project I had plenty of help from the [Slack](https://slack.com/intl/en-gb/) Community and tutor support.
   - In order to find a solution to a problem, I often search on the [Stackoverflow](https://stackoverflow.com/).
