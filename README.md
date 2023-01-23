@@ -327,6 +327,9 @@ The following technologies were used throughout the development of the project:
   - [Am i responsive](https://ui.dev/amiresponsive)
   - [whimsical Wireframe](https://whimsical.com/)
   - [Pexels](https://www.pexels.com/)
+  - [canva](https://www.canva.com/)
+  - [Grammarly](https://www.grammarly.com/)
+  - [Google spreadsheet](https://www.google.co.uk/sheets/about/)
 
 ## Components
 
@@ -379,7 +382,7 @@ The following technologies were used throughout the development of the project:
     web: serve -s build
     ```
 
-  - To add everything to the github, add these commands to the terminal
+  - To add everything on the github, add these commands to the terminal
 
     ```
       git add .
@@ -393,5 +396,14 @@ The following technologies were used throughout the development of the project:
 
 - ### Content
 
+  - Using the [CI Moment](https://github.com/Code-Institute-Solutions/moments) project walkthrough as a guide, I then customized the project to make it my own. The profile page, bookmark topics, and contact page were also updated.
+  - [Gareth-McGirr mentor](https://github.com/Gareth-McGirr/body-doodles) and [Leah Fisher's pp5](https://github.com/cornishcoder1/pp5-react-frontend-the-winding-path) projects provided insight into what should be added into my readme file and what testing is required for my project.
+  - [Grammarly](https://www.grammarly.com/) was used while creating the readme documentation to fix some grammar issues due to english being not my first language.
+  - By making this project I had plenty of help from the [Slack](https://slack.com/intl/en-gb/) Community and tutor support.
+  - In order to find a solution to a problem, I often search on the [Stackoverflow](https://stackoverflow.com/).
+  - ESlint support was provided by alumni student Ian Meigh in the Slack channel.
+
 - ### Media
+  - Site logo and search result not found logo were made using [canva](https://www.canva.com/)
+  - Images for the site were mostly taken from [pexels](https://www.pexels.com/)
   - `404 graphic` was taken from [Vecteezy](https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document) website.
